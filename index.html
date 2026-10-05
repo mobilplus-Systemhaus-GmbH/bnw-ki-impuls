@@ -150,42 +150,38 @@ footer{border-top:1px solid rgba(0,0,0,0.08);padding:28px 40px;display:flex;alig
 <div class="section">
   <div class="section-title">Impressionen vom Abend</div>
   <div class="section-sub">Bilder und Videos vom KI-Impuls</div>
-  <div class="media-grid" style="grid-template-columns:repeat(3,1fr)">
+  <!-- Videos -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px">
     <div class="media-card">
-      <div style="position:relative;width:100%;aspect-ratio:9/16;max-height:380px">
+      <div style="position:relative;width:100%;aspect-ratio:9/16;max-height:420px">
         <iframe src="https://www.youtube.com/embed/Hf4WB2Pnn4I" style="position:absolute;inset:0;width:100%;height:100%;border:none" allowfullscreen loading="lazy"></iframe>
       </div>
-      <div class="media-caption">Video · KI-Impuls · 01.10.2026</div>
     </div>
     <div class="media-card">
       <div style="position:relative;width:100%;aspect-ratio:16/9">
         <iframe src="https://www.youtube.com/embed/HonMge3Ajk4" style="position:absolute;inset:0;width:100%;height:100%;border:none" allowfullscreen loading="lazy"></iframe>
       </div>
-      <div class="media-caption">KI-Demo live · mobilplus Systemhaus</div>
     </div>
+  </div>
+  <!-- Fotos -->
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
     <div class="media-card">
       <img src="20261001_164239.jpeg" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block">
-      <div class="media-caption">Business Netzwerk Wilsdruff · 01.10.2026</div>
     </div>
     <div class="media-card">
       <img src="20261001_164329%281%29.jpeg" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block">
-      <div class="media-caption">KI-Impuls · Wilsdruff</div>
     </div>
     <div class="media-card">
       <img src="20261001_172712.jpeg" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block">
-      <div class="media-caption">Frank Winkler · mobilplus</div>
     </div>
     <div class="media-card">
       <img src="20261001_174524.jpeg" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block">
-      <div class="media-caption">Live-Demo · KI im Einsatz</div>
     </div>
     <div class="media-card">
       <img src="20261001_174954.jpeg" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block">
-      <div class="media-caption">Publikum · Business Netzwerk Wilsdruff</div>
     </div>
     <div class="media-card">
       <img src="20261001_183255.jpeg" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block">
-      <div class="media-caption">Impressionen · 01.10.2026</div>
     </div>
   </div>
 </div>
@@ -359,21 +355,30 @@ footer{border-top:1px solid rgba(0,0,0,0.08);padding:28px 40px;display:flex;alig
   <div class="section-title">Weiterführende Links</div>
   <div class="section-sub">Mehr erfahren und in Kontakt bleiben</div>
   <div class="links-grid">
-    <a class="link-card" href="https://mobilplus.it" target="_blank">
+    <div class="link-card">
       <div class="link-icon">💻</div>
       <div class="link-name">mobilplus Systemhaus</div>
-      <div class="link-url">mobilplus.it</div>
-    </a>
-    <a class="link-card" href="https://blacksand.de" target="_blank">
+      <div style="display:flex;gap:8px;margin-top:6px">
+        <a href="https://mobilplus.it" target="_blank" style="font-size:11px;color:#E05C00;text-decoration:none;border:1px solid rgba(224,92,0,0.3);padding:3px 8px;border-radius:4px">🌐 Website</a>
+        <a href="https://www.linkedin.com/company/3851618" target="_blank" style="font-size:11px;color:#4EA8D0;text-decoration:none;border:1px solid rgba(78,168,208,0.3);padding:3px 8px;border-radius:4px">in LinkedIn</a>
+      </div>
+    </div>
+    <div class="link-card">
       <div class="link-icon">⚡</div>
       <div class="link-name">BlackSand GmbH</div>
-      <div class="link-url">blacksand.de</div>
-    </a>
-    <a class="link-card" href="https://business-netzwerk-wilsdruff.de/" target="_blank">
+      <div style="display:flex;gap:8px;margin-top:6px">
+        <a href="https://blacksand.de" target="_blank" style="font-size:11px;color:#E05C00;text-decoration:none;border:1px solid rgba(224,92,0,0.3);padding:3px 8px;border-radius:4px">🌐 Website</a>
+        <a href="https://www.linkedin.com/company/blacksandgmbh/" target="_blank" style="font-size:11px;color:#4EA8D0;text-decoration:none;border:1px solid rgba(78,168,208,0.3);padding:3px 8px;border-radius:4px">in LinkedIn</a>
+      </div>
+    </div>
+    <div class="link-card">
       <div class="link-icon">🤝</div>
       <div class="link-name">Business Netzwerk Wilsdruff</div>
-      <div class="link-url">business-netzwerk-wilsdruff.de</div>
-    </a>
+      <div style="display:flex;gap:8px;margin-top:6px">
+        <a href="https://business-netzwerk-wilsdruff.de/" target="_blank" style="font-size:11px;color:#E05C00;text-decoration:none;border:1px solid rgba(224,92,0,0.3);padding:3px 8px;border-radius:4px">🌐 Website</a>
+        <a href="https://www.linkedin.com/in/bn-wilsdruff/" target="_blank" style="font-size:11px;color:#4EA8D0;text-decoration:none;border:1px solid rgba(78,168,208,0.3);padding:3px 8px;border-radius:4px">in LinkedIn</a>
+      </div>
+    </div>
   </div>
 </div>
 
