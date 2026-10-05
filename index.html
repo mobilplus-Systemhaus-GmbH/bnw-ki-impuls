@@ -26,8 +26,9 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backdrop
 .nav-sq{width:34px;height:34px;border-radius:8px;background:var(--orange);display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;font-size:13px;color:#fff}
 .nav-name{font-weight:600;font-size:14px;color:#1A1A1A}
 .nav-sub{font-size:11px;color:#718096}
-.nav-cta{background:var(--orange);color:#fff;border:none;border-radius:8px;padding:8px 18px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;transition:all .2s}
+.nav-cta{background:var(--orange);color:#fff;border:none;border-radius:8px;padding:8px 18px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;transition:all .2s;white-space:nowrap}
 .nav-cta:hover{background:#FF7520;transform:translateY(-1px)}
+@media(max-width:600px){.nav-cta{display:none}}
 
 /* HERO */
 .hero{padding:80px 40px 64px;max-width:900px;margin:0 auto;text-align:center}
@@ -121,9 +122,7 @@ footer{border-top:1px solid rgba(0,0,0,0.08);padding:28px 40px;display:flex;alig
       <div style="width:1px;height:28px;background:rgba(0,0,0,0.15)"></div>
       <img src="blacksand.png" style="height:28px;width:auto;object-fit:contain">
     </div>
-    <div>
-      <div class="nav-name" style="margin-left:8px">KI-Impuls · Business Netzwerk Wilsdruff · 01.10.2026</div>
-    </div>
+
   </div>
   <a class="nav-cta" href="https://tally.so/r/obXk7M" target="_blank">Gespräch buchen</a>
 </nav>
@@ -385,7 +384,7 @@ footer{border-top:1px solid rgba(0,0,0,0.08);padding:28px 40px;display:flex;alig
 <!-- FOOTER -->
 <footer>
   <div class="footer-brand">
-    <div class="nav-sq">m+</div>
+    <img src="logo_mp-systemhaus_1063x237.jpg" style="height:28px;width:auto;object-fit:contain">
     <div class="footer-txt">
       <strong>Frank Winkler</strong> · mobilplus Systemhaus GmbH ·
       <a href="mailto:frank@mobilplus.it">frank@mobilplus.it</a>
