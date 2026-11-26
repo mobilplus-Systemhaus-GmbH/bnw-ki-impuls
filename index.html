@@ -1,468 +1,398 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>KI-Impuls · Business Netzwerk Wilsdruff</title>
+<meta name="description" content="Recap zum KI-Impuls im Business Netzwerk Wilsdruff am 01. Oktober 2026: Botschaften, Präsentationen, Downloads und nächste Schritte.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&display=swap');
-:root {
-  --navy:   #1A1A2E;
-  --navy2:  #F0F4F8;
-  --orange: #E05C00;
-  --white:  #1A1A1A;
-  --light:  #4A5568;
-  --muted:  #718096;
-  --border: rgba(0,0,0,0.10);
-  --bg:     #FFFFFF;
+:root{
+  --dunkel:#262626; --dunkel2:#343434; --orange:#F18E35; --orange-tief:#D9741C;
+  --text:#1E1E1E; --leise:#5F6368; --linie:rgba(0,0,0,.09); --flaeche:#F6F5F3; --weiss:#FFFFFF;
+  --gruen:#2E7D4F; --gruen-hell:#E6F3EB;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:#1A1A1A;font-family:'Inter',sans-serif;line-height:1.6}
+body{background:var(--weiss);color:var(--text);font-family:'Inter',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.zahl{font-family:'Manrope','Inter',sans-serif}
+a{color:inherit}
+.innen{max-width:1120px;margin:0 auto;padding:0 32px}
 
-/* NAV */
-nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(16px);border-bottom:1px solid rgba(0,0,0,0.08);padding:14px 40px;display:flex;align-items:center;justify-content:space-between}
-.nav-logo{display:flex;align-items:center;gap:12px}
-.nav-sq{width:34px;height:34px;border-radius:8px;background:var(--orange);display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;font-size:13px;color:#fff}
-.nav-name{font-weight:600;font-size:14px;color:#1A1A1A}
-.nav-sub{font-size:11px;color:#718096}
-.nav-cta{background:var(--orange);color:#fff;border:none;border-radius:8px;padding:8px 18px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;transition:all .2s;white-space:nowrap}
-.nav-cta:hover{background:#FF7520;transform:translateY(-1px)}
-@media(max-width:600px){.nav-cta{display:none}}
+/* Kopf */
+.kopf{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--linie)}
+.kopf .innen{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.logos{display:flex;align-items:center;gap:14px}
+.logos img{display:block;width:auto;object-fit:contain}
+.logos .trenner{width:1px;height:26px;background:var(--linie)}
+.knopf{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#fff;text-decoration:none;font-weight:600;font-size:14px;padding:10px 18px;border-radius:10px;transition:background .2s,transform .2s;white-space:nowrap}
+.knopf:hover{background:var(--orange-tief);transform:translateY(-1px)}
+.knopf.hell{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.28)}
+.knopf.hell:hover{background:rgba(255,255,255,.08)}
+.knopf.rand{background:transparent;color:var(--text);border:1.5px solid var(--linie)}
+.knopf.rand:hover{border-color:var(--orange);color:var(--orange-tief)}
 
-/* HERO */
-.hero{padding:80px 40px 64px;max-width:900px;margin:0 auto;text-align:center}
-.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(224,92,0,0.12);border:1px solid rgba(224,92,0,0.25);color:var(--orange);padding:5px 16px;border-radius:20px;font-size:12px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;margin-bottom:24px}
-.hero h1{font-family:'Syne',sans-serif;font-size:clamp(32px,5vw,58px);font-weight:800;line-height:1.05;margin-bottom:20px;color:#1A1A1A}
-.hero h1 em{color:var(--orange);font-style:normal}
-.hero p{font-size:17px;color:#4A5568;font-weight:300;max-width:600px;margin:0 auto 40px}
+/* Bühne */
+/* Veranstalter */
+.veranstalter{background:var(--flaeche);border-bottom:1px solid var(--linie)}
+.veranstalter .innen{display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:center;padding-top:48px;padding-bottom:48px}
+.bnw-karte{background:#fff;border-radius:20px;padding:22px 34px;box-shadow:0 1px 2px rgba(0,0,0,.05),0 8px 24px rgba(0,0,0,.06)}
+.bnw-karte img{display:block;height:120px;width:auto}
+.bnw-text h2{font-size:clamp(28px,3.6vw,44px);line-height:1.08;font-weight:800;letter-spacing:-.015em}
+.bnw-text p{color:var(--leise);font-size:17px;margin-top:10px;max-width:36em}
+.bnw-knoepfe{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+@media(max-width:760px){.veranstalter .innen{grid-template-columns:1fr;gap:24px;justify-items:start}.bnw-karte img{height:84px}}
 
-/* MEDIA GRID */
-.section{padding:48px 40px;max-width:1100px;margin:0 auto}
-.section-title{font-family:'Syne',sans-serif;font-size:22px;font-weight:700;margin-bottom:8px;color:var(--orange)}
-.section-sub{font-size:14px;color:#718096;margin-bottom:28px}
+.buehne{background:var(--dunkel);color:#fff;position:relative;overflow:hidden}
+.buehne::after{content:'';position:absolute;right:-180px;top:-180px;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(241,142,53,.22),rgba(241,142,53,0) 65%);pointer-events:none}
+.buehne .innen{padding-top:84px;padding-bottom:84px;position:relative;z-index:1}
+.pille{display:inline-block;border:1px solid var(--orange);color:var(--orange);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:6px 14px;border-radius:999px;margin-bottom:28px}
+.buehne h1{font-size:clamp(38px,6.2vw,74px);line-height:1.02;font-weight:800;letter-spacing:-.02em;max-width:17ch}
+.buehne h1 span{color:var(--orange);display:block}
+.buehne .unter{font-size:clamp(16px,1.6vw,19px);color:rgba(255,255,255,.72);max-width:44em;margin-top:24px}
+.buehne .aktionen{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.kennzahlen{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:60px}
+.kz{background:var(--dunkel2);border-radius:14px;padding:22px 22px 20px}
+.kz .zahl{font-size:clamp(30px,3.4vw,42px);font-weight:800;color:var(--orange);line-height:1}
+.kz p{font-size:13.5px;color:rgba(255,255,255,.72);margin-top:10px;line-height:1.45}
 
-.media-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.media-card{background:#F7FAFC;border:1px solid rgba(0,0,0,0.08);border-radius:12px;overflow:hidden}
-.img-placeholder{width:100%;aspect-ratio:16/9;background:#E2E8F0;display:flex;align-items:center;justify-content:center;color:#718096;font-size:13px;flex-direction:column;gap:8px}
-.img-placeholder span{font-size:28px}
-.media-card video{width:100%;display:block;aspect-ratio:16/9;object-fit:cover;background:#000}
-.media-caption{padding:12px 16px;font-size:12px;color:#718096}
+/* Abschnitte */
+.abschnitt{padding:84px 0}
+.abschnitt.grau{background:var(--flaeche)}
+.ueber{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--orange-tief);margin-bottom:10px}
+.abschnitt h2{font-size:clamp(28px,3.4vw,40px);line-height:1.1;font-weight:800;letter-spacing:-.015em;max-width:22ch}
+.abschnitt .einleitung{color:var(--leise);font-size:17px;max-width:42em;margin-top:14px}
 
-/* DIVIDER */
-.divider{border:none;border-top:1px solid var(--border);margin:0 40px}
+/* Impressionen */
+.impressionen{padding-bottom:84px}
+.bilder{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:12px;margin-top:36px}
+.bilder figure{margin:0;border-radius:14px;overflow:hidden;background:var(--flaeche)}
+.bilder figure.gross{grid-column:span 2;grid-row:span 2}
+.bilder img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.bilder figure:hover img{transform:scale(1.03)}
+@media(max-width:960px){.bilder{grid-template-columns:repeat(2,1fr);grid-auto-rows:170px}}
+@media(max-width:620px){.bilder{grid-template-columns:1fr 1fr;grid-auto-rows:120px}}
 
-/* KEY MESSAGES */
-.messages{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.msg-card{background:#F7FAFC;border:1px solid rgba(0,0,0,0.08);border-radius:12px;padding:22px;position:relative;overflow:hidden}
-.msg-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--orange)}
-.msg-num{font-family:'Syne',sans-serif;font-size:38px;font-weight:800;color:rgba(224,92,0,0.2);line-height:1;margin-bottom:8px}
-.msg-text{font-size:14px;color:#1A1A1A;font-weight:500;line-height:1.5}
+.rueckblick{display:grid;grid-template-columns:1.3fr 1fr;gap:36px;align-items:center;margin-top:28px;background:var(--dunkel);color:#fff;border-radius:18px;padding:24px}
+.rueckblick .film{width:100%;aspect-ratio:1536/832;border-radius:12px;background:#000;display:block}
+.rueckblick h3{font-family:"Manrope",sans-serif;font-size:24px;line-height:1.2;font-weight:800;margin-bottom:10px}
+.rueckblick p{color:rgba(255,255,255,.75);font-size:15px}
+.rueckblick .ueber{color:var(--orange)}
+.rueckblick .klein-hinweis{font-size:12.5px;color:rgba(255,255,255,.5);margin-top:12px}
+@media(max-width:860px){.rueckblick{grid-template-columns:1fr;gap:18px;padding:16px}}
+.downloads{margin-top:48px}
+.downloads h3{font-family:"Manrope",sans-serif;font-size:20px;font-weight:800;margin-bottom:14px}
+.download{display:flex;align-items:center;gap:16px;max-width:560px;background:var(--weiss);border:1px solid var(--linie);border-radius:14px;padding:16px 20px;text-decoration:none;transition:border-color .2s,transform .2s}
+.download:hover{border-color:var(--orange);transform:translateY(-2px)}
+.dl-art{width:46px;height:46px;border-radius:10px;background:rgba(241,142,53,.14);color:var(--orange-tief);display:grid;place-items:center;font-weight:800;font-size:12px;flex-shrink:0}
+.dl-text b{display:block;font-size:15px}.dl-text small{font-size:12.5px;color:var(--leise)}
+.dl-pfeil{margin-left:auto;color:var(--orange-tief);font-size:20px;font-weight:700}
 
-/* DOWNLOADS */
-.downloads-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.dl-card{background:#F7FAFC;border:1px solid rgba(0,0,0,0.08);border-radius:10px;padding:18px 20px;display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--white);transition:all .2s}
-.dl-card:hover{border-color:var(--orange);transform:translateY(-2px)}
-.dl-icon{width:40px;height:40px;border-radius:8px;background:rgba(224,92,0,0.12);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
-.dl-name{font-size:13px;font-weight:600}
-.dl-sub{font-size:11px;color:#718096;margin-top:2px}
-.dl-arrow{margin-left:auto;color:var(--orange);font-size:18px}
+/* Kernaussage Beschäftigung/Wertschöpfung */
+.hebel{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-top:44px}
+.def{display:grid;gap:18px}
+.def div{border-left:4px solid var(--gruen);padding:4px 0 4px 18px;font-size:18px}
+.def div.bs{border-color:var(--orange)}
+.def b{font-family:'Manrope',sans-serif}
+.balkenkarte{background:var(--weiss);border:1px solid var(--linie);border-radius:18px;padding:30px}
+.balkenkarte h3{font-size:15px;font-weight:700;margin-bottom:22px}
+.zeile{display:grid;grid-template-columns:60px 1fr;gap:14px;align-items:center;margin-bottom:14px;font-size:13px;font-weight:600;color:var(--leise)}
+.balken{display:flex;height:40px;border-radius:10px;overflow:hidden;gap:3px}
+.balken i{display:flex;align-items:center;padding:0 12px;font-style:normal;font-size:13.5px;font-weight:700;color:#fff;white-space:nowrap}
+.balken .ws{background:var(--gruen)} .balken .bs{background:var(--orange)}
+.balkenkarte .fuss{font-size:13px;color:var(--leise);margin-top:16px}
 
-/* LINKS GRID */
-.links-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.link-card{background:#F7FAFC;border:1px solid rgba(0,0,0,0.08);border-radius:10px;padding:18px;text-decoration:none;color:#1A1A1A;transition:all .2s;display:flex;flex-direction:column;gap:6px}
-.link-card:hover{border-color:var(--orange);transform:translateY(-2px)}
-.link-icon{font-size:22px}
-.link-name{font-size:13px;font-weight:600}
-.link-url{font-size:11px;color:#718096}
+/* Fälle */
+.faelle{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+.fall{background:var(--weiss);border:1px solid var(--linie);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:10px}
+.fall .kopfzeile{display:flex;align-items:center;gap:12px}
+.fall .nr{width:34px;height:34px;border-radius:50%;background:var(--dunkel);color:#fff;display:grid;place-items:center;font-weight:700;font-size:14px;flex-shrink:0}
+.fall .kat{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--leise)}
+.fall h3{font-size:19px;line-height:1.25;font-weight:800}
+.fall p{font-size:14.5px;color:var(--leise);flex:1}
+.fall .ergebnis{align-self:flex-start;font-size:14px;font-weight:700;color:var(--gruen);background:var(--gruen-hell);padding:6px 12px;border-radius:999px}
+.fall.ausblick{background:var(--dunkel);color:#fff;border-color:var(--dunkel);grid-column:1/-1}
+.fall.ausblick .nr{background:var(--orange)}
+.fall.ausblick .kat,.fall.ausblick p{color:rgba(255,255,255,.72)}
+.fall.ausblick .ergebnis{background:rgba(241,142,53,.18);color:var(--orange)}
 
-/* SURVEY + BOOKING */
-.action-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.action-card{border-radius:14px;padding:32px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px}
-.action-card.survey{background:rgba(224,92,0,0.08);border:1px solid rgba(224,92,0,0.25)}
-.action-card.booking{background:#F7FAFC;border:1px solid rgba(0,0,0,0.08)}
-.action-icon{font-size:36px}
-.action-title{font-family:'Syne',sans-serif;font-size:18px;font-weight:700}
-.action-sub{font-size:13px;color:#4A5568;max-width:260px}
-.action-btn{display:inline-block;padding:12px 28px;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none;transition:all .2s;cursor:pointer;border:none}
-.btn-orange{background:var(--orange);color:#fff}
-.btn-orange:hover{background:#FF7520;transform:translateY(-1px)}
-.btn-ghost{background:none;border:1.5px solid rgba(0,0,0,0.15);color:#1A1A1A}
-.btn-ghost:hover{border-color:var(--orange);color:var(--orange)}
+.fall .film{width:100%;aspect-ratio:16/9;border-radius:10px;background:#123;display:block;margin:2px 0 4px}
+.fall.ausblick{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:center}
+.ausblick-text{display:flex;flex-direction:column;gap:10px}
+@media(max-width:760px){.fall.ausblick{grid-template-columns:1fr;gap:14px}}
+.film-hinweis{font-size:13px;color:var(--leise);margin-top:14px}
 
-/* SPEAKERS */
-.speakers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.nexxup-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.speaker-card{background:#F7FAFC;border:1px solid rgba(0,0,0,0.08);border-radius:12px;padding:24px;text-align:center}
-.speaker-avatar{width:72px;height:72px;border-radius:50%;background:#E2E8F0;border:2px solid var(--orange);display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;font-size:20px;color:var(--orange);margin:0 auto 12px}
-.speaker-name{font-size:15px;font-weight:600;margin-bottom:4px;color:#1A1A1A}
-.speaker-role{font-size:12px;color:#718096;margin-bottom:12px}
-.speaker-li{display:inline-flex;align-items:center;gap:6px;background:rgba(10,102,194,0.15);border:1px solid rgba(10,102,194,0.3);color:#4EA8D0;padding:5px 12px;border-radius:6px;font-size:11px;font-weight:600;text-decoration:none;transition:all .2s}
-.speaker-li:hover{background:rgba(10,102,194,0.25)}
+/* Rechnung */
+.rechnung{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:44px;border:1px solid var(--linie);border-radius:18px;overflow:hidden;background:var(--weiss)}
+.schritt{padding:28px 24px;border-right:1px solid var(--linie);position:relative}
+.schritt:last-child{border-right:none;background:var(--dunkel);color:#fff}
+.schritt .zahl{font-size:clamp(26px,3vw,36px);font-weight:800;line-height:1.05}
+.schritt:last-child .zahl{color:var(--orange)}
+.schritt p{font-size:13.5px;color:var(--leise);margin-top:8px}
+.schritt:last-child p{color:rgba(255,255,255,.72)}
+.annahme{font-size:13px;color:var(--leise);margin-top:14px}
 
-/* FOOTER */
-footer{border-top:1px solid rgba(0,0,0,0.08);padding:28px 40px;display:flex;align-items:center;justify-content:space-between;margin-top:48px}
-.footer-brand{display:flex;align-items:center;gap:10px}
-.footer-txt{font-size:12px;color:#718096}
-.footer-txt a{color:var(--orange);text-decoration:none}
+/* Botschaften */
+.botschaften{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+.botschaft{padding:26px 24px;border-radius:16px;background:var(--weiss);border:1px solid var(--linie)}
+.botschaft .zahl{font-size:15px;font-weight:800;color:var(--orange-tief);margin-bottom:12px}
+.botschaft b{display:block;font-family:'Manrope',sans-serif;font-size:19px;line-height:1.3;margin-bottom:8px}
+.botschaft p{font-size:14.5px;color:var(--leise)}
 
-@media(max-width:768px){
-  nav,section,.section,.hero,footer,.divider{padding-left:20px;padding-right:20px}
-  .media-grid,.messages,.downloads-grid,.links-grid,.action-grid,.speakers-grid,.nexxup-grid{grid-template-columns:1fr}
-  .hero h1{font-size:32px}
+/* Nächster Schritt */
+.angebot{display:grid;grid-template-columns:1.2fr 1fr;gap:16px;margin-top:44px}
+.angebot-karte{border-radius:20px;padding:36px;display:flex;flex-direction:column;gap:14px}
+.angebot-karte.dunkel{background:var(--dunkel);color:#fff}
+.angebot-karte.hell{background:var(--flaeche);border:1px solid var(--linie)}
+.angebot-karte h3{font-size:clamp(24px,2.6vw,32px);line-height:1.12;font-weight:800}
+.angebot-karte h3 span{color:var(--orange)}
+.angebot-karte .klein{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--orange)}
+.angebot-karte.hell .klein{color:var(--orange-tief)}
+.angebot-karte p{font-size:15px;color:rgba(255,255,255,.72)}
+.angebot-karte.hell p{color:var(--leise)}
+.liste{list-style:none;display:grid;gap:8px;font-size:15px}
+.liste li{display:flex;gap:10px}
+.liste li::before{content:'→';color:var(--orange);font-weight:700}
+.preis{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-top:4px}
+.preis .zahl{font-size:44px;font-weight:800;line-height:1}
+.preis s{color:rgba(255,255,255,.5)}
+.preis small{font-size:13px;color:rgba(255,255,255,.6)}
+.frist{display:inline-block;align-self:flex-start;background:rgba(241,142,53,.16);color:var(--orange);font-weight:700;font-size:13px;padding:6px 12px;border-radius:999px}
+.angebot-karte .knopf{align-self:flex-start;margin-top:6px}
+
+.nutzen{display:grid;grid-template-columns:1fr 1.4fr;gap:20px;margin-top:40px}
+.nutzen h3{font-family:"Manrope",sans-serif;font-size:18px;font-weight:800;margin-bottom:16px}
+.weg{background:var(--weiss);border:1px solid var(--linie);border-radius:18px;padding:28px}
+.weg ul{list-style:none;display:grid;gap:12px}
+.weg li{display:flex;gap:12px;font-size:15px;color:var(--leise)}
+.weg li::before{content:"–";color:var(--orange-tief);font-weight:800}
+.wohin{background:var(--dunkel);color:#fff;border-radius:18px;padding:28px}
+.ziele{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ziel{background:var(--dunkel2);border-radius:12px;padding:18px}
+.ziel b{display:block;font-family:"Manrope",sans-serif;font-size:17px;color:var(--orange);margin-bottom:6px}
+.ziel p{font-size:14px;color:rgba(255,255,255,.75)}
+.partner{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:12px;color:var(--leise)}
+.partner img{display:block;width:auto}
+.gesichter{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:13px;font-weight:600;color:var(--orange-tief)}
+.gesichter img{width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid #fff;box-shadow:0 0 0 1px var(--linie)}
+.gesichter img+img{margin-left:-14px}
+.gesichter span{margin-left:6px}
+@media(max-width:860px){.nutzen{grid-template-columns:1fr}}
+@media(max-width:520px){.ziele{grid-template-columns:1fr}}
+
+/* Menschen + Links */
+.menschen{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+@media(max-width:960px){.menschen{grid-template-columns:repeat(2,1fr)}}
+.mensch{display:flex;gap:18px;align-items:center;background:var(--weiss);border:1px solid var(--linie);border-radius:16px;padding:22px}
+.initialen{width:68px;height:68px;border-radius:50%;border:2px solid var(--orange);background:var(--dunkel);color:var(--orange);display:grid;place-items:center;font-family:"Manrope",sans-serif;font-weight:800;font-size:22px;flex-shrink:0}
+.mensch img{width:68px;height:68px;border-radius:50%;object-fit:cover;border:2px solid var(--orange);flex-shrink:0}
+.mensch b{display:block;font-size:16px}
+.mensch span{display:block;font-size:13px;color:var(--leise);margin-bottom:8px}
+.verweise{display:flex;gap:8px;flex-wrap:wrap}
+.verweise a{font-size:12px;font-weight:600;text-decoration:none;border:1px solid var(--linie);padding:4px 10px;border-radius:999px;transition:border-color .2s,color .2s}
+.verweise a:hover{border-color:var(--orange);color:var(--orange-tief)}
+
+/* Fuß */
+.fuss{border-top:1px solid var(--linie);padding:30px 0}
+.fuss .innen{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:12.5px;color:var(--leise)}
+.fuss a{color:var(--orange-tief);text-decoration:none}
+
+@media(max-width:960px){
+  .kennzahlen,.rechnung{grid-template-columns:repeat(2,1fr)}
+  .schritt:nth-child(2){border-right:none}
+  .schritt:nth-child(-n+2){border-bottom:1px solid var(--linie)}
+  .hebel,.angebot{grid-template-columns:1fr;gap:28px}
+  .faelle,.botschaften{grid-template-columns:repeat(2,1fr)}
+  .fall.ausblick{grid-column:1/-1}
 }
+@media(max-width:620px){
+  .innen{padding:0 16px}
+  .buehne .innen{padding-top:56px;padding-bottom:56px}
+  .abschnitt{padding:60px 0}
+  .faelle,.botschaften,.menschen,.rechnung,.kennzahlen{grid-template-columns:1fr}
+  .fall.ausblick{grid-column:auto}
+  .schritt{border-right:none;border-bottom:1px solid var(--linie)}
+  .logos .mp,.logos .trenner,.kopf .knopf{display:none}
+  .angebot-karte{padding:26px}
+}
+.videos-zwei{display:grid;grid-template-columns:1fr 1.78fr;gap:12px;margin-top:36px;align-items:stretch}
+.yt{position:relative;border-radius:14px;overflow:hidden;background:#000;aspect-ratio:16/9}
+.yt.hoch{aspect-ratio:auto;min-height:100%}
+.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.videos-zwei+.bilder{margin-top:12px}
+.download-raster{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:36px}
+.download-raster .download{max-width:none}
+@media(max-width:760px){.videos-zwei,.download-raster{grid-template-columns:1fr}.yt.hoch{aspect-ratio:9/16;max-height:560px}}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-logo">
-    <div style="display:flex;align-items:center;gap:12px">
-      <img src="logo_mp-systemhaus_1063x237.jpg" style="height:32px;width:auto;object-fit:contain">
-      <div style="width:1px;height:28px;background:rgba(0,0,0,0.15)"></div>
-      <img src="blacksand.png" style="height:28px;width:auto;object-fit:contain">
-      <div style="width:1px;height:28px;background:rgba(0,0,0,0.15)"></div>
-      <img src="BNW_Logo_1.png" style="height:52px;width:auto;object-fit:contain">
+<header class="kopf">
+  <div class="innen">
+    <div class="logos">
+      <img class="bnw" src="BNW_Logo_1.png" alt="Business Netzwerk Wilsdruff" style="height:52px">
+      <span class="trenner"></span>
+      <img class="mp" src="logo_mp-systemhaus_1063x237.jpg" alt="mobilplus Systemhaus" style="height:26px">
+      <span class="trenner"></span>
+      <img class="mp" src="blacksand.png" alt="Blacksand GmbH" style="height:24px">
     </div>
-
+    <a class="knopf" href="#naechster-schritt">Gespräch buchen</a>
   </div>
-  <a class="nav-cta" href="https://tally.so/r/obXk7M" target="_blank">Gespräch buchen</a>
-</nav>
+</header>
 
-<!-- BNW HERO — prominent über Titel -->
-<div style="background:linear-gradient(135deg,#0D1B2A 0%,#1A1A2E 100%);padding:52px 40px;text-align:center">
-  <div style="background:#fff;border-radius:14px;padding:16px 32px;display:inline-block;margin-bottom:20px"><img src="BNW%20Logo.svg" style="height:88px;width:auto;object-fit:contain;display:block"></div>
-  <div style="font-size:13px;font-weight:700;color:#E05C00;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px">Veranstalter des Abends</div>
-  <div style="font-family:'Syne',sans-serif;font-size:clamp(24px,4vw,38px);font-weight:800;color:#fff;margin-bottom:10px;line-height:1.1">Business Netzwerk Wilsdruff</div>
-  <div style="font-size:15px;color:rgba(255,255,255,0.55);max-width:540px;margin:0 auto 28px;line-height:1.6">Gewerbenetzwerk für Kesselsdorf, Wilsdruff und Klipphausen — mitten drin statt nur dabei.</div>
-  <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-    <a href="https://business-netzwerk-wilsdruff.de/" target="_blank" style="font-size:13px;color:rgba(255,255,255,0.75);text-decoration:none;border:1px solid rgba(255,255,255,0.2);padding:10px 20px;border-radius:8px">🌐 Website</a>
-    <a href="https://www.linkedin.com/in/bn-wilsdruff/" target="_blank" style="font-size:13px;color:rgba(255,255,255,0.75);text-decoration:none;border:1px solid rgba(255,255,255,0.2);padding:10px 20px;border-radius:8px">in LinkedIn</a>
-    <a href="https://business-netzwerk-wilsdruff.de/sign-in/" target="_blank" style="font-size:13px;font-weight:700;color:#fff;background:#E05C00;padding:10px 24px;border-radius:8px;text-decoration:none">Noch kein Mitglied? Jetzt anmelden →</a>
-  </div>
-</div>
-
-<!-- UMFRAGE TEASER -->
-
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-tag">📍 Recap · Business Netzwerk Wilsdruff · 01. Oktober 2026</div>
-  <h1>Was, wenn Dein Wettbewerber morgen<br><em>doppelt so schnell</em> ist?</h1>
-  <p>KI und Automatisierung verändern nicht nur Prozesse — sie verändern, was ein Unternehmen überhaupt leisten kann. Hier findest Du alles zum Nachlesen und Weitermachen.</p>
-</div>
-
-<div style="background:rgba(224,92,0,0.06);border-top:3px solid #E05C00;border-bottom:3px solid #E05C00;padding:24px 40px;text-align:center">
-  <div style="max-width:700px;margin:0 auto;display:flex;align-items:center;gap:20px;flex-wrap:wrap;justify-content:center">
-    <div style="text-align:left">
-      <div style="font-size:16px;font-weight:700;color:#1A1A1A;margin-bottom:4px">2 Minuten für Dein Feedback — es lohnt sich.</div>
-      <div style="font-size:13px;color:#4A5568">Was hast Du mitgenommen? Wo siehst Du KI-Potenzial in Deinem Unternehmen? Deine Antworten helfen uns — und zeigen Dir schwarz auf weiß wo Du stehst.</div>
-    </div>
-    <a href="https://umfrage.mobilplus.it/529173" target="_blank" style="flex-shrink:0;background:#E05C00;color:#fff;border-radius:8px;padding:12px 24px;font-size:14px;font-weight:600;text-decoration:none;white-space:nowrap;transition:all .2s">Zur Umfrage →</a>
-  </div>
-</div>
-
-<!-- MEDIA -->
-<div class="section">
-  <div class="section-title">Impressionen vom Abend</div>
-  <div class="section-sub">Bilder und Videos vom KI-Impuls</div>
-  <!-- Videos -->
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px">
-    <div class="media-card">
-      <div style="position:relative;width:100%;aspect-ratio:9/16;max-height:420px">
-        <iframe src="https://www.youtube.com/embed/Hf4WB2Pnn4I" style="position:absolute;inset:0;width:100%;height:100%;border:none" allowfullscreen loading="lazy"></iframe>
-      </div>
-    </div>
-    <div class="media-card">
-      <div style="position:relative;width:100%;aspect-ratio:16/9">
-        <iframe src="https://www.youtube.com/embed/HonMge3Ajk4" style="position:absolute;inset:0;width:100%;height:100%;border:none" allowfullscreen loading="lazy"></iframe>
+<section class="veranstalter">
+  <div class="innen">
+    <div class="bnw-karte"><img src="BNW%20Logo.svg" alt="Business Netzwerk Wilsdruff"></div>
+    <div class="bnw-text">
+      <div class="ueber">Veranstalter des Abends</div>
+      <h2>Business Netzwerk Wilsdruff</h2>
+      <p>Gewerbenetzwerk für Kesselsdorf, Wilsdruff und Klipphausen – mitten drin statt nur dabei.</p>
+      <div class="bnw-knoepfe">
+        <a class="knopf" href="https://business-netzwerk-wilsdruff.de/sign-in/" target="_blank" rel="noopener">Noch kein Mitglied? Jetzt anmelden →</a>
+        <a class="knopf rand" href="https://business-netzwerk-wilsdruff.de/" target="_blank" rel="noopener">Website</a>
+        <a class="knopf rand" href="https://www.linkedin.com/in/bn-wilsdruff/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
   </div>
-  <!-- Fotos -->
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
-    <div class="media-card">
-      <img src="20261001_164239.jpeg" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block">
+</section>
+
+<section class="buehne">
+  <div class="innen">
+    <div class="pille">Recap · Business Netzwerk Wilsdruff · 01. Oktober 2026</div>
+    <h1>Was, wenn Dein Wettbewerber morgen <span>doppelt so schnell ist?</span></h1>
+    <p class="unter">KI und Automatisierung verändern nicht nur Prozesse – sie verändern, was ein Unternehmen überhaupt leisten kann. Hier findest Du alles zum Nachlesen und Weitermachen.</p>
+    <div class="aktionen">
+      <a class="knopf" href="https://umfrage.mobilplus.it/529173" target="_blank" rel="noopener">2 Minuten Feedback geben →</a>
+      <a class="knopf hell" href="november/">Zum Recap vom 25. November</a>
     </div>
-    <div class="media-card">
-      <img src="20261001_164329%281%29.jpeg" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block">
-    </div>
-    <div class="media-card">
-      <img src="20261001_172712.jpeg" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block">
-    </div>
-    <div class="media-card">
-      <img src="20261001_174524.jpeg" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block">
-    </div>
-    <div class="media-card">
-      <img src="20261001_174954.jpeg" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block">
-    </div>
-    <div class="media-card">
-      <img src="20261001_183255.jpeg" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block">
+    <div class="kennzahlen">
+      <div class="kz"><div class="zahl">3</div><p>Impulse: mobilplus, Blacksand und das Business Netzwerk Wilsdruff</p></div>
+      <div class="kz"><div class="zahl">6</div><p>Botschaften für die Geschäftsführung zum Mitnehmen</p></div>
+      <div class="kz"><div class="zahl">8</div><p>Downloads: Präsentationen, Magazin, Checkliste und mehr</p></div>
+      <div class="kz"><div class="zahl">2×</div><p>so viel bewegen mit gleicher Mannschaft – kein Versprechen, Mathematik</p></div>
     </div>
   </div>
-</div>
+</section>
 
-<hr class="divider">
-
-<!-- KEY MESSAGES -->
-<div class="section">
-  <div class="section-title">Die wichtigsten Botschaften</div>
-  <div class="section-sub">Was Du am 01. Oktober mitgenommen hast</div>
-  <div class="messages">
-    <div class="msg-card">
-      <div class="msg-num">01</div>
-      <div class="msg-text">IT ist keine Assistenzfunktion. Sie ist Strategie. Und die gehört in die Geschäftsführung.</div>
+<section class="abschnitt impressionen">
+  <div class="innen">
+    <div class="ueber">Impressionen vom Abend</div>
+    <h2>Der KI-Impuls am 01. Oktober</h2>
+    <div class="videos-zwei">
+      <div class="yt hoch"><iframe src="https://www.youtube.com/embed/Hf4WB2Pnn4I" title="KI-Impuls Video 1" allowfullscreen loading="lazy"></iframe></div>
+      <div class="yt"><iframe src="https://www.youtube.com/embed/HonMge3Ajk4" title="KI-Impuls Video 2" allowfullscreen loading="lazy"></iframe></div>
     </div>
-    <div class="msg-card">
-      <div class="msg-num">02</div>
-      <div class="msg-text">Disruption kommt — aber nicht überall gleich. Entscheidend ist, ob Du weißt wo sie Dich trifft.</div>
-    </div>
-    <div class="msg-card">
-      <div class="msg-num">03</div>
-      <div class="msg-text">Nicht mit KI zu starten ist keine sichere Entscheidung. Es ist die riskanteste.</div>
-    </div>
-    <div class="msg-card">
-      <div class="msg-num">04</div>
-      <div class="msg-text">Erst digital. Dann automatisiert. Dann KI. Wer KI auf analoge Prozesse wirft, verbrennt Geld.</div>
-    </div>
-    <div class="msg-card">
-      <div class="msg-num">05</div>
-      <div class="msg-text">Mit gleicher Mannschaft doppelt so viel bewegen — das ist kein Versprechen. Das ist Mathematik.</div>
-    </div>
-    <div class="msg-card">
-      <div class="msg-num">06</div>
-      <div class="msg-text">Wer KI intern alleine einführt, bleibt meistens beim Ausprobieren. Ein erfahrener Partner macht den Unterschied.</div>
+    <div class="bilder">
+      <figure class="gross"><img src="20261001_174524.jpeg" alt="KI-Impuls im Business Netzwerk Wilsdruff" loading="lazy"></figure>
+      <figure><img src="20261001_164239.jpeg" alt="Eindruck vom KI-Impuls" loading="lazy"></figure>
+      <figure><img src="20261001_164329%281%29.jpeg" alt="Eindruck vom KI-Impuls" loading="lazy"></figure>
+      <figure><img src="20261001_172712.jpeg" alt="Eindruck vom KI-Impuls" loading="lazy"></figure>
+      <figure><img src="20261001_174954.jpeg" alt="Eindruck vom KI-Impuls" loading="lazy"></figure>
     </div>
   </div>
-</div>
+</section>
 
-<hr class="divider">
-
-<!-- DOWNLOADS -->
-<div class="section">
-  <div class="section-title">Downloads</div>
-  <div class="section-sub">Präsentationen und Handouts zum Mitnehmen</div>
-  <div class="downloads-grid">
-    <a class="dl-card" href="01%20-%20BNW_Pr%C3%A4sentation_mobilplus_Frank_Winkler.pdf" target="_blank">
-      <div class="dl-icon">📄</div>
-      <div>
-        <div class="dl-name">Präsentation mobilplus · Frank Winkler</div>
-        <div class="dl-sub">KI-Impuls · PDF</div>
-      </div>
-      <div class="dl-arrow">↓</div>
-    </a>
-    <a class="dl-card" href="02%20-%20BNW_Pr%C3%A4sentation_BlackSand_Bastian_Rehbein.pdf" target="_blank">
-      <div class="dl-icon">📄</div>
-      <div>
-        <div class="dl-name">Präsentation Blacksand · Bastian Rehbein</div>
-        <div class="dl-sub">KI-Impuls · PDF</div>
-      </div>
-      <div class="dl-arrow">↓</div>
-    </a>
-    <a class="dl-card" href="BNW_KI_Impuls_2025.pptx" target="_blank">
-      <div class="dl-icon">📊</div>
-      <div>
-        <div class="dl-name">Präsentation · Thomas Gräbner</div>
-        <div class="dl-sub">Business Netzwerk Wilsdruff · PPTX</div>
-      </div>
-      <div class="dl-arrow">↓</div>
-    </a>
-    <a class="dl-card" href="Handout-Studio-Demovideo%207.mp4" target="_blank">
-      <div class="dl-icon">🎬</div>
-      <div>
-        <div class="dl-name">Handout Studio · Demo-Video</div>
-        <div class="dl-sub">KI-generiertes Handout · ShowCase · MP4</div>
-      </div>
-      <div class="dl-arrow">↓</div>
-    </a>
-    <a class="dl-card" href="BNW%20Vortragsskript_Thomas_Graebner_KI_Impuls.pdf" target="_blank">
-      <div class="dl-icon">📝</div>
-      <div>
-        <div class="dl-name">Vortragsskript · Thomas Gräbner</div>
-        <div class="dl-sub">KI-generiert · ShowCase · PDF</div>
-      </div>
-      <div class="dl-arrow">↓</div>
-    </a>
-    <div style="grid-column:1/-1;background:rgba(224,92,0,0.06);border:1px solid rgba(224,92,0,0.2);border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:12px;font-size:13px;color:#4A5568">
-      <span style="font-size:20px;flex-shrink:0">🤖</span>
-      <span><strong style="color:#E05C00">Hinweis:</strong> Die Handouts sind KI-generierte Muster — als ShowCase um zu zeigen, was mit KI heute machbar ist. Kein Anspruch auf Vollständigkeit.</span>
-    </div>
-    <a class="dl-card" href="11%20-%2020-Seiter%20Magazin_Nr01_KI_im_Unternehmen_Chancen_Pflichten_Final.pdf" target="_blank">
-      <div class="dl-icon">📰</div>
-      <div>
-        <div class="dl-name">Magazin: KI im Unternehmen</div>
-        <div class="dl-sub">Chancen & Pflichten · 20 Seiten · PDF</div>
-      </div>
-      <div class="dl-arrow">↓</div>
-    </a>
-    <a class="dl-card" href="11.1%20-%2020-Seiter%20-%20Checkliste_zum_Magazin.pdf" target="_blank">
-      <div class="dl-icon">✅</div>
-      <div>
-        <div class="dl-name">Checkliste zum Magazin</div>
-        <div class="dl-sub">KI im Unternehmen · PDF</div>
-      </div>
-      <div class="dl-arrow">↓</div>
-    </a>
-    <a class="dl-card" href="10%20-%204-Seiter%20-%20IT_SICHERHEIT_KOMPAKT_Nr10_KI_im_Unternehmenseinsatz.pdf" target="_blank">
-      <div class="dl-icon">🔒</div>
-      <div>
-        <div class="dl-name">IT-Sicherheit Kompakt</div>
-        <div class="dl-sub">KI im Unternehmenseinsatz · 4 Seiten · PDF</div>
-      </div>
-      <div class="dl-arrow">↓</div>
-    </a>
-  </div>
-</div>
-
-<hr class="divider">
-
-<!-- SURVEY + BOOKING -->
-<div class="section" id="booking">
-  <div class="section-title">Dein nächster Schritt</div>
-  <div class="section-sub">Nimm Dir 2 Minuten — für Dich und für uns</div>
-  <div class="action-grid">
-    <div class="action-card survey">
-      <div class="action-icon">📋</div>
-      <div class="action-title">Kurze Umfrage</div>
-      <div class="action-sub">Was nimmst Du mit? Dein Feedback hilft uns — und zeigt Dir wo Du stehst.</div>
-      <a class="action-btn btn-orange" href="https://umfrage.mobilplus.it/529173" target="_blank">Zur Umfrage →</a>
-    </div>
-    <div class="action-card booking" style="text-align:left;align-items:flex-start">
-      <div style="font-size:11px;font-weight:700;color:#E05C00;letter-spacing:1px;text-transform:uppercase">KI-Potenzialanalyse für Geschäftsführer</div>
-      <div class="action-title" style="font-size:20px;line-height:1.2">Finde heraus, was KI in Deinem Unternehmen bringt.</div>
-      <div class="action-sub" style="text-align:left;max-width:100%">Im Online-Termin analysieren wir gemeinsam, wo KI in Deinem Unternehmen Zeit spart und Prozesse verbessert.</div>
-      <div style="display:flex;flex-direction:column;gap:8px;width:100%">
-        <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:#1A1A1A"><span style="color:#E05C00;font-weight:700">→</span> <strong>Erste Bewertung</strong> Deiner wichtigsten Unternehmensprozesse</div>
-        <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:#1A1A1A"><span style="color:#E05C00;font-weight:700">→</span> <strong>Identifikation konkreter KI-Anwendungsfälle</strong> in Deinem Betrieb</div>
-        <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:#1A1A1A"><span style="color:#E05C00;font-weight:700">→</span> <strong>Empfehlung datenschutzkonformer KI-Tools</strong></div>
-        <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:#1A1A1A"><span style="color:#E05C00;font-weight:700">→</span> <strong>3 konkrete nächste Schritte</strong> für den Einstieg mit KI</div>
-      </div>
-      <div style="display:flex;align-items:center;gap:8px;background:rgba(224,92,0,0.08);border:1px solid rgba(224,92,0,0.2);border-radius:8px;padding:8px 14px;font-size:12px;color:#E05C00;font-weight:600">
-        ✓ Kostenfrei für Teilnehmer · Online · ca. 30–60 Minuten
-      </div>
-      <a class="action-btn btn-orange" href="https://tally.so/r/obXk7M" target="_blank" style="width:100%;text-align:center">Kostenlose Potenzialanalyse sichern →</a>
+<section class="abschnitt grau">
+  <div class="innen">
+    <div class="ueber">Die wichtigsten Botschaften</div>
+    <h2>Was Du am 01. Oktober mitgenommen hast</h2>
+    <div class="botschaften">
+      <div class="botschaft"><div class="zahl">01</div><b>IT ist keine Assistenzfunktion.</b><p>Sie ist Strategie. Und die gehört in die Geschäftsführung.</p></div>
+      <div class="botschaft"><div class="zahl">02</div><b>Disruption kommt – aber nicht überall gleich.</b><p>Entscheidend ist, ob Du weißt, wo sie Dich trifft.</p></div>
+      <div class="botschaft"><div class="zahl">03</div><b>Nicht mit KI zu starten ist keine sichere Entscheidung.</b><p>Es ist die riskanteste.</p></div>
+      <div class="botschaft"><div class="zahl">04</div><b>Erst digital. Dann automatisiert. Dann KI.</b><p>Wer KI auf analoge Prozesse wirft, verbrennt Geld.</p></div>
+      <div class="botschaft"><div class="zahl">05</div><b>Mit gleicher Mannschaft doppelt so viel bewegen.</b><p>Das ist kein Versprechen. Das ist Mathematik.</p></div>
+      <div class="botschaft"><div class="zahl">06</div><b>Ein erfahrener Partner macht den Unterschied.</b><p>Wer KI intern alleine einführt, bleibt meistens beim Ausprobieren.</p></div>
     </div>
   </div>
-</div>
+</section>
 
-<hr class="divider">
-
-<!-- SPEAKERS -->
-<div class="section">
-  <div class="section-title">Die Referenten</div>
-  <div class="section-sub">Auf LinkedIn vernetzen und im Gespräch bleiben</div>
-  <div class="speakers-grid">
-    <div class="speaker-card">
-      <img src="Frank.jpg" style="width:72px;height:72px;border-radius:50%;object-fit:cover;border:2px solid #E05C00;margin:0 auto 12px;display:block">
-      <div class="speaker-name">Frank Winkler</div>
-      <div class="speaker-role">Geschäftsführer · mobilplus Systemhaus GmbH</div>
-      <a class="speaker-li" href="https://www.linkedin.com/in/frank-km-winkler" target="_blank">
-        <span>in</span> LinkedIn
-      </a>
-      <a class="speaker-li" style="margin-top:6px;background:rgba(224,92,0,0.1);border-color:rgba(224,92,0,0.3);color:#E05C00;padding:5px 10px;font-size:14px" href="mailto:frank@mobilplus.it">
-        ✉
-      </a>
+<section class="abschnitt">
+  <div class="innen">
+    <div class="ueber">Downloads</div>
+    <h2>Präsentationen und Handouts zum Mitnehmen</h2>
+    <div class="download-raster">
+      <a class="download" href="01%20-%20BNW_Pr%C3%A4sentation_mobilplus_Frank_Winkler.pdf" target="_blank" rel="noopener"><span class="dl-art">PDF</span><span class="dl-text"><b>Präsentation mobilplus · Frank Winkler</b><small>KI-Impuls · PDF</small></span><span class="dl-pfeil">↓</span></a>
+      <a class="download" href="02%20-%20BNW_Pr%C3%A4sentation_BlackSand_Bastian_Rehbein.pdf" target="_blank" rel="noopener"><span class="dl-art">PDF</span><span class="dl-text"><b>Präsentation Blacksand · Bastian Rehbein</b><small>KI-Impuls · PDF</small></span><span class="dl-pfeil">↓</span></a>
+      <a class="download" href="BNW_KI_Impuls_2025.pptx" target="_blank" rel="noopener"><span class="dl-art">PPTX</span><span class="dl-text"><b>Präsentation · Thomas Gräbner</b><small>Business Netzwerk Wilsdruff · PPTX</small></span><span class="dl-pfeil">↓</span></a>
+      <a class="download" href="11%20-%2020-Seiter%20Magazin_Nr01_KI_im_Unternehmen_Chancen_Pflichten_Final.pdf" target="_blank" rel="noopener"><span class="dl-art">PDF</span><span class="dl-text"><b>Magazin: KI im Unternehmen</b><small>Chancen &amp; Pflichten · 20 Seiten · PDF</small></span><span class="dl-pfeil">↓</span></a>
+      <a class="download" href="11.1%20-%2020-Seiter%20-%20Checkliste_zum_Magazin.pdf" target="_blank" rel="noopener"><span class="dl-art">PDF</span><span class="dl-text"><b>Checkliste zum Magazin</b><small>KI im Unternehmen · PDF</small></span><span class="dl-pfeil">↓</span></a>
+      <a class="download" href="10%20-%204-Seiter%20-%20IT_SICHERHEIT_KOMPAKT_Nr10_KI_im_Unternehmenseinsatz.pdf" target="_blank" rel="noopener"><span class="dl-art">PDF</span><span class="dl-text"><b>IT-Sicherheit Kompakt</b><small>KI im Unternehmenseinsatz · 4 Seiten · PDF</small></span><span class="dl-pfeil">↓</span></a>
+      <a class="download" href="Handout-Studio-Demovideo%207.mp4" target="_blank" rel="noopener"><span class="dl-art">MP4</span><span class="dl-text"><b>Handout Studio · Demo-Video</b><small>KI-generiertes Handout · ShowCase · MP4</small></span><span class="dl-pfeil">↓</span></a>
+      <a class="download" href="BNW%20Vortragsskript_Thomas_Graebner_KI_Impuls.pdf" target="_blank" rel="noopener"><span class="dl-art">PDF</span><span class="dl-text"><b>Vortragsskript · Thomas Gräbner</b><small>KI-generiert · ShowCase · PDF</small></span><span class="dl-pfeil">↓</span></a>
     </div>
-    <div class="speaker-card">
-      <img src="Bastian.png" style="width:72px;height:72px;border-radius:50%;object-fit:cover;border:2px solid #E05C00;margin:0 auto 12px;display:block">
-      <div class="speaker-name">Bastian Rehbein</div>
-      <div class="speaker-role">Geschäftsführer · Blacksand GmbH</div>
-      <a class="speaker-li" href="https://www.linkedin.com/in/bastianrehbein/" target="_blank">
-        <span>in</span> LinkedIn
-      </a>
-      <a class="speaker-li" style="margin-top:6px;background:rgba(224,92,0,0.1);border-color:rgba(224,92,0,0.3);color:#E05C00;padding:5px 10px;font-size:14px" href="mailto:rehbein@blacksand.de">
-        ✉
-      </a>
-    </div>
-    <div class="speaker-card">
-      <img src="Thomas.png" style="width:72px;height:72px;border-radius:50%;object-fit:cover;border:2px solid #E05C00;margin:0 auto 12px;display:block">
-      <div class="speaker-name">Thomas Gräbner</div>
-      <div class="speaker-role">Business Netzwerk Wilsdruff</div>
-      <a class="speaker-li" href="https://www.linkedin.com/in/thomas-gr%C3%A4bner-695806214/" target="_blank">
-        <span>in</span> LinkedIn
-      </a>
-      <a class="speaker-li" style="margin-top:6px;background:rgba(224,92,0,0.1);border-color:rgba(224,92,0,0.3);color:#E05C00;padding:5px 10px;font-size:14px" href="mailto:vorstand@business-netzwerk-wilsdruff.de">
-        ✉
-      </a>
-    </div>
+    <p class="annahme">Hinweis: Die Handouts sind KI-generierte Muster – als ShowCase, um zu zeigen, was mit KI heute machbar ist. Kein Anspruch auf Vollständigkeit.</p>
   </div>
-</div>
+</section>
 
-<hr class="divider">
-
-<!-- NÄCHSTES EVENT -->
-<div class="section">
-  <div class="section-title">Nächster BNW-Abend · November 2026</div>
-  <div class="section-sub">Diese Experten werden dabei sein — schon mal vormerken</div>
-  <div class="nexxup-grid">
-    <div style="background:#F7FAFC;border:1px solid rgba(0,0,0,0.08);border-radius:12px;padding:22px;display:flex;align-items:center;gap:16px">
-      <img src="benjamin.png" style="width:56px;height:56px;border-radius:50%;object-fit:cover;border:2px solid #E05C00;flex-shrink:0">
-      <div>
-        <div style="font-size:15px;font-weight:700;color:#1A1A1A">Benjamin Liebl</div>
-        <div style="font-size:12px;color:#E05C00;font-weight:600;margin-bottom:4px">NexxUp · Next Generation Ausbildung</div>
-        <div style="font-size:11px;color:#718096;margin-bottom:8px;line-height:1.4">Talente von hier, Zukunft für die Region. NexxUp bringt junge Menschen und Unternehmen frühzeitig zusammen.</div>
-        <div style="display:flex;gap:6px;flex-wrap:wrap">
-          <a href="https://www.nexxup.de/" target="_blank" style="font-size:11px;color:#E05C00;text-decoration:none;border:1px solid rgba(224,92,0,0.3);padding:3px 8px;border-radius:4px">🌐 nexxup.de</a>
-        </div>
+<section class="abschnitt grau" id="naechster-schritt">
+  <div class="innen">
+    <div class="ueber">Dein nächster Schritt</div>
+    <h2>Nimm Dir 2 Minuten – für Dich und für uns</h2>
+    <div class="angebot">
+      <div class="angebot-karte dunkel">
+        <div class="klein">Kurze Umfrage</div>
+        <h3>Was nimmst Du mit? <span>Und wo stehst Du?</span></h3>
+        <p>Wo siehst Du KI-Potenzial in Deinem Unternehmen? Deine Antworten helfen uns – und zeigen Dir schwarz auf weiß, wo Du stehst.</p>
+        <a class="knopf" href="https://umfrage.mobilplus.it/529173" target="_blank" rel="noopener">Zur Umfrage →</a>
       </div>
-    </div>
-    <div style="background:#F7FAFC;border:1px solid rgba(0,0,0,0.08);border-radius:12px;padding:22px;display:flex;align-items:center;gap:16px">
-      <img src="biberstein.png" style="width:56px;height:56px;border-radius:50%;object-fit:cover;border:2px solid #E05C00;flex-shrink:0">
-      <div>
-        <div style="font-size:15px;font-weight:700;color:#1A1A1A">Gustav Bieberstein</div>
-        <div style="font-size:12px;color:#718096;margin-bottom:8px">Digital Manufacturing Consultant · SAP</div>
-        <a href="https://www.linkedin.com/in/gustav-bieberstein-568b86207/" target="_blank" style="font-size:11px;color:#4EA8D0;text-decoration:none;border:1px solid rgba(78,168,208,0.3);padding:3px 8px;border-radius:4px">in LinkedIn</a>
+      <div class="angebot-karte hell">
+        <div class="partner"><img src="logo_mp-systemhaus_1063x237.jpg" alt="mobilplus Systemhaus" style="height:22px"><span>gemeinsam mit</span><img src="blacksand.png" alt="Blacksand GmbH" style="height:20px"></div>
+        <div class="klein">KI-Potenzialanalyse für Geschäftsführer</div>
+        <h3>Finde heraus, was KI in Deinem Unternehmen bringt.</h3>
+        <p>Im Online-Termin analysieren wir gemeinsam, wo KI in Deinem Unternehmen Zeit spart und Prozesse verbessert.</p>
+        <ul class="liste" style="color:var(--text)">
+          <li>Erste Bewertung Deiner wichtigsten Unternehmensprozesse</li>
+          <li>Identifikation konkreter KI-Anwendungsfälle in Deinem Betrieb</li>
+          <li>Empfehlung datenschutzkonformer KI-Tools</li>
+          <li>3 konkrete nächste Schritte für den Einstieg mit KI</li>
+        </ul>
+        <div class="gesichter"><img src="Frank.jpg" alt="Frank Winkler"><img src="Bastian.png" alt="Bastian Rehbein"><span>Kostenfrei für Teilnehmer · online · ca. 30–60 Minuten</span></div>
+        <a class="knopf" href="https://tally.so/r/obXk7M" target="_blank" rel="noopener">Kostenlose Potenzialanalyse sichern →</a>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<hr class="divider">
-
-<!-- WEBSEITEN -->
-<div class="section">
-  <div class="section-title">Weiterführende Links</div>
-  <div class="section-sub">Mehr erfahren und in Kontakt bleiben</div>
-  <div class="links-grid">
-    <div class="link-card">
-      <div class="link-icon">💻</div>
-      <div class="link-name">mobilplus Systemhaus</div>
-      <div style="display:flex;gap:8px;margin-top:6px">
-        <a href="https://mobilplus.it" target="_blank" style="font-size:11px;color:#E05C00;text-decoration:none;border:1px solid rgba(224,92,0,0.3);padding:3px 8px;border-radius:4px">🌐 Website</a>
-        <a href="https://www.linkedin.com/company/3851618" target="_blank" style="font-size:11px;color:#4EA8D0;text-decoration:none;border:1px solid rgba(78,168,208,0.3);padding:3px 8px;border-radius:4px">in LinkedIn</a>
+<section class="abschnitt">
+  <div class="innen">
+    <div class="ueber">Im Gespräch bleiben</div>
+    <h2>Die Referenten</h2>
+    <div class="menschen">
+      <div class="mensch">
+        <img src="Frank.jpg" alt="Frank Winkler">
+        <div><b>Frank Winkler</b><span>Geschäftsführer · mobilplus Systemhaus GmbH</span>
+          <div class="verweise"><a href="https://www.linkedin.com/in/frank-km-winkler" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:frank@mobilplus.it">E-Mail</a><a href="https://mobilplus.it" target="_blank" rel="noopener">mobilplus.it</a></div></div>
       </div>
-    </div>
-    <div class="link-card">
-      <div class="link-icon">⚡</div>
-      <div class="link-name">Blacksand GmbH</div>
-      <div style="display:flex;gap:8px;margin-top:6px">
-        <a href="https://blacksand.de" target="_blank" style="font-size:11px;color:#E05C00;text-decoration:none;border:1px solid rgba(224,92,0,0.3);padding:3px 8px;border-radius:4px">🌐 Website</a>
-        <a href="https://www.linkedin.com/company/blacksandgmbh/" target="_blank" style="font-size:11px;color:#4EA8D0;text-decoration:none;border:1px solid rgba(78,168,208,0.3);padding:3px 8px;border-radius:4px">in LinkedIn</a>
+      <div class="mensch">
+        <img src="Bastian.png" alt="Bastian Rehbein">
+        <div><b>Bastian Rehbein</b><span>Geschäftsführer · Blacksand GmbH</span>
+          <div class="verweise"><a href="https://www.linkedin.com/in/bastianrehbein/" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:rehbein@blacksand.de">E-Mail</a><a href="https://blacksand.de" target="_blank" rel="noopener">blacksand.de</a></div></div>
       </div>
-    </div>
-    <div class="link-card">
-      <div class="link-icon">🤝</div>
-      <div class="link-name">Business Netzwerk Wilsdruff</div>
-      <div style="display:flex;gap:8px;margin-top:6px">
-        <a href="https://business-netzwerk-wilsdruff.de/" target="_blank" style="font-size:11px;color:#E05C00;text-decoration:none;border:1px solid rgba(224,92,0,0.3);padding:3px 8px;border-radius:4px">🌐 Website</a>
-        <a href="https://www.linkedin.com/in/bn-wilsdruff/" target="_blank" style="font-size:11px;color:#4EA8D0;text-decoration:none;border:1px solid rgba(78,168,208,0.3);padding:3px 8px;border-radius:4px">in LinkedIn</a>
+      <div class="mensch">
+        <img src="Thomas.png" alt="Thomas Gräbner">
+        <div><b>Thomas Gräbner</b><span>Business Netzwerk Wilsdruff</span>
+          <div class="verweise"><a href="https://www.linkedin.com/in/thomas-gr%C3%A4bner-695806214/" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:vorstand@business-netzwerk-wilsdruff.de">E-Mail</a><a href="https://business-netzwerk-wilsdruff.de/" target="_blank" rel="noopener">Website</a></div></div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-brand">
-    <img src="logo_mp-systemhaus_1063x237.jpg" style="height:28px;width:auto;object-fit:contain">
-    <div class="footer-txt">
-      <strong>Frank Winkler</strong> · mobilplus Systemhaus GmbH ·
-      <a href="mailto:frank@mobilplus.it">frank@mobilplus.it</a>
-    </div>
+<section class="abschnitt grau">
+  <div class="innen">
+    <div class="ueber">Der nächste Abend</div>
+    <h2>Im Oktober das Warum. Am 25. November das Wie.</h2>
+    <p class="einleitung">Beim zweiten KI-Abend ging es in die Praxis: sieben Fälle aus dem Alltag eines Handwerksbetriebs, live vorgeführt – mit Impulsen von Gustav Bieberstein (SAP) und Benjamin Liebl (NexxUp).</p>
+    <div class="bnw-knoepfe"><a class="knopf" href="november/">Zum Recap vom 25. November →</a></div>
   </div>
-  <div class="footer-txt" style="text-align:right">
-    Business Netzwerk Wilsdruff · KI-Impuls · 01.10.2026<br>
-    <span style="font-size:10px;color:#9CA3AF">Powered by <a href="https://mobilplus.it" target="_blank" style="color:#E05C00;text-decoration:none">mobilplus Systemhaus GmbH</a></span>
+</section>
+
+<footer class="fuss">
+  <div class="innen">
+    <span><strong>Frank Winkler</strong> · mobilplus Systemhaus GmbH · <a href="mailto:frank@mobilplus.it">frank@mobilplus.it</a></span>
+    <span>Business Netzwerk Wilsdruff · KI-Impuls · 01.10.2026 · <a href="https://blacksand.de" target="_blank" rel="noopener">Blacksand GmbH</a> · <a href="https://mobilplus.it" target="_blank" rel="noopener">mobilplus Systemhaus GmbH</a></span>
   </div>
 </footer>
 

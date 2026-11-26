@@ -75,6 +75,21 @@ a{color:inherit}
 @media(max-width:960px){.bilder{grid-template-columns:repeat(2,1fr);grid-auto-rows:170px}}
 @media(max-width:620px){.bilder{grid-template-columns:1fr 1fr;grid-auto-rows:120px}}
 
+.rueckblick{display:grid;grid-template-columns:1.3fr 1fr;gap:36px;align-items:center;margin-top:28px;background:var(--dunkel);color:#fff;border-radius:18px;padding:24px}
+.rueckblick .film{width:100%;aspect-ratio:1536/832;border-radius:12px;background:#000;display:block}
+.rueckblick h3{font-family:"Manrope",sans-serif;font-size:24px;line-height:1.2;font-weight:800;margin-bottom:10px}
+.rueckblick p{color:rgba(255,255,255,.75);font-size:15px}
+.rueckblick .ueber{color:var(--orange)}
+.rueckblick .klein-hinweis{font-size:12.5px;color:rgba(255,255,255,.5);margin-top:12px}
+@media(max-width:860px){.rueckblick{grid-template-columns:1fr;gap:18px;padding:16px}}
+.downloads{margin-top:48px}
+.downloads h3{font-family:"Manrope",sans-serif;font-size:20px;font-weight:800;margin-bottom:14px}
+.download{display:flex;align-items:center;gap:16px;max-width:560px;background:var(--weiss);border:1px solid var(--linie);border-radius:14px;padding:16px 20px;text-decoration:none;transition:border-color .2s,transform .2s}
+.download:hover{border-color:var(--orange);transform:translateY(-2px)}
+.dl-art{width:46px;height:46px;border-radius:10px;background:rgba(241,142,53,.14);color:var(--orange-tief);display:grid;place-items:center;font-weight:800;font-size:12px;flex-shrink:0}
+.dl-text b{display:block;font-size:15px}.dl-text small{font-size:12.5px;color:var(--leise)}
+.dl-pfeil{margin-left:auto;color:var(--orange-tief);font-size:20px;font-weight:700}
+
 /* Kernaussage Beschäftigung/Wertschöpfung */
 .hebel{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-top:44px}
 .def{display:grid;gap:18px}
@@ -147,10 +162,31 @@ a{color:inherit}
 .frist{display:inline-block;align-self:flex-start;background:rgba(241,142,53,.16);color:var(--orange);font-weight:700;font-size:13px;padding:6px 12px;border-radius:999px}
 .angebot-karte .knopf{align-self:flex-start;margin-top:6px}
 
+.nutzen{display:grid;grid-template-columns:1fr 1.4fr;gap:20px;margin-top:40px}
+.nutzen h3{font-family:"Manrope",sans-serif;font-size:18px;font-weight:800;margin-bottom:16px}
+.weg{background:var(--weiss);border:1px solid var(--linie);border-radius:18px;padding:28px}
+.weg ul{list-style:none;display:grid;gap:12px}
+.weg li{display:flex;gap:12px;font-size:15px;color:var(--leise)}
+.weg li::before{content:"–";color:var(--orange-tief);font-weight:800}
+.wohin{background:var(--dunkel);color:#fff;border-radius:18px;padding:28px}
+.ziele{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ziel{background:var(--dunkel2);border-radius:12px;padding:18px}
+.ziel b{display:block;font-family:"Manrope",sans-serif;font-size:17px;color:var(--orange);margin-bottom:6px}
+.ziel p{font-size:14px;color:rgba(255,255,255,.75)}
+.partner{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:12px;color:var(--leise)}
+.partner img{display:block;width:auto}
+.gesichter{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:13px;font-weight:600;color:var(--orange-tief)}
+.gesichter img{width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid #fff;box-shadow:0 0 0 1px var(--linie)}
+.gesichter img+img{margin-left:-14px}
+.gesichter span{margin-left:6px}
+@media(max-width:860px){.nutzen{grid-template-columns:1fr}}
+@media(max-width:520px){.ziele{grid-template-columns:1fr}}
+
 /* Menschen + Links */
 .menschen{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
 @media(max-width:960px){.menschen{grid-template-columns:repeat(2,1fr)}}
 .mensch{display:flex;gap:18px;align-items:center;background:var(--weiss);border:1px solid var(--linie);border-radius:16px;padding:22px}
+.initialen{width:68px;height:68px;border-radius:50%;border:2px solid var(--orange);background:var(--dunkel);color:var(--orange);display:grid;place-items:center;font-family:"Manrope",sans-serif;font-weight:800;font-size:22px;flex-shrink:0}
 .mensch img{width:68px;height:68px;border-radius:50%;object-fit:cover;border:2px solid var(--orange);flex-shrink:0}
 .mensch b{display:block;font-size:16px}
 .mensch span{display:block;font-size:13px;color:var(--leise);margin-bottom:8px}
@@ -191,8 +227,10 @@ a{color:inherit}
       <img class="bnw" src="../BNW_Logo_1.png" alt="Business Netzwerk Wilsdruff" style="height:52px">
       <span class="trenner"></span>
       <img class="mp" src="../logo_mp-systemhaus_1063x237.jpg" alt="mobilplus Systemhaus" style="height:26px">
+      <span class="trenner mp"></span>
+      <img class="mp" src="../blacksand.png" alt="Blacksand GmbH" style="height:24px">
     </div>
-    <a class="knopf" href="#naechster-schritt">Platz für Chefsache KI sichern</a>
+    <a class="knopf" href="#naechster-schritt">Platz für Tagesworkshop „Chefsache KI“ sichern</a>
   </div>
 </header>
 
@@ -223,8 +261,8 @@ a{color:inherit}
     </div>
     <div class="kennzahlen">
       <div class="kz"><div class="zahl">7</div><p>Fälle, live vorgeführt – in der Reihenfolge eurer Umfrage vom Oktober</p></div>
-      <div class="kz"><div class="zahl">500 h</div><p>Arbeitszeit im Jahr, die eine Firma mit 25 Mitarbeitern zurückgewinnt</p></div>
-      <div class="kz"><div class="zahl">21.800 €</div><p>im Jahr: gesparte Zeit plus Geld, das sonst liegen geblieben wäre</p></div>
+      <div class="kz"><div class="zahl">≈ 3 Monate</div><p>Arbeit einer Vollzeitkraft im Jahr, die wieder für Kunden da ist</p></div>
+      <div class="kz"><div class="zahl">4.300 €</div><p>im Jahr gefunden – Leistung, die erbracht, aber nie berechnet wurde</p></div>
       <div class="kz"><div class="zahl">47 → 90 %</div><p>Anteil Wertschöpfung an unserer Zeit, wenn der Ablauf neu gedacht wird</p></div>
     </div>
   </div>
@@ -244,6 +282,15 @@ a{color:inherit}
       <figure><img src="bilder/abend-07.jpg" alt="Vortrag im Business Netzwerk Wilsdruff" loading="lazy"></figure>
       <figure><img src="bilder/abend-08.jpg" alt="Vortrag: Was Sie morgen tun können" loading="lazy"></figure>
       <figure><img src="bilder/abend-09.jpg" alt="Vortrag: Wie sicher ist das?" loading="lazy"></figure>
+    </div>
+    <div class="rueckblick">
+      <video class="film" controls preload="none" playsinline poster="videos/rueckblick-kira-thomas.jpg"><source src="videos/rueckblick-kira-thomas.mp4" type="video/mp4"><track kind="subtitles" src="videos/rueckblick-kira-thomas.vtt" srclang="de" label="Deutsch">Dein Browser kann das Video nicht abspielen.</video>
+      <div>
+        <div class="ueber">Zum Einstieg des Abends</div>
+        <h3>Der Rückblick auf Oktober – mit Kira und Thomas</h3>
+        <p>Unsere KI-Mitarbeiter Kira und Thomas fassen den ersten Abend in knapp zwei Minuten zusammen: Warum Digitalisierung Chefsache ist und was seitdem passiert ist.</p>
+        <p class="klein-hinweis">Bild, Stimme und Schnitt sind KI-generiert – als Beispiel, was heute machbar ist. Untertitel lassen sich im Player einschalten.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -276,7 +323,7 @@ a{color:inherit}
 <section class="abschnitt" id="faelle">
   <div class="innen">
     <div class="ueber">Ein Tag bei der Elbtal Haustechnik GmbH</div>
-    <h2>Sieben Fälle, jeder mit einer Zahl</h2>
+    <h2>Sieben Fälle aus dem Betriebsalltag</h2>
     <p class="einleitung">25 Mitarbeiter, Heizung und Sanitär, 3,8 Mio. € Umsatz – erfunden, aber typisch für die Region. Jeder Fall folgte demselben Muster: Problem, Vorführung, Ergebnis, was man dafür braucht. Zu jedem Fall gibt es hier die Aufzeichnung zum Nachsehen, jeweils unter anderthalb Minuten.</p>
     <div class="faelle">
       <article class="fall">
@@ -336,15 +383,31 @@ a{color:inherit}
 
 <section class="abschnitt grau">
   <div class="innen">
-    <div class="ueber">Was das im Jahr bringt</div>
-    <h2>Zusammengerechnet: 21.800&nbsp;€ für eine Firma mit 25 Mitarbeitern</h2>
-    <div class="rechnung">
-      <div class="schritt"><div class="zahl">652 Min</div><p>gesparte Zeit je Woche aus den Fällen 1 bis 3, 5 und 6</p></div>
-      <div class="schritt"><div class="zahl">≈ 500 h</div><p>im Jahr, bei 46 Arbeitswochen</p></div>
-      <div class="schritt"><div class="zahl">17.500 €</div><p>bei 35 € je Stunde – plus 4.300 € aus Fall 4</p></div>
-      <div class="schritt"><div class="zahl">21.800 €</div><p>im Jahr. Fall 7 ist noch nicht eingerechnet.</p></div>
+    <div class="ueber">Was das im Alltag bringt</div>
+    <h2>Zeit zurück für das, wofür Kunden bezahlen</h2>
+    <p class="einleitung">In der Musterfirma kamen über alle Fälle rund 500 Stunden im Jahr zusammen – etwa drei Monate Arbeit einer Vollzeitkraft. Wichtiger als die genaue Zahl ist, wohin diese Zeit danach geht.</p>
+    <div class="nutzen">
+      <div class="weg">
+        <h3>Was wegfällt</h3>
+        <ul>
+          <li>Suchen nach Unterlagen, Ständen und Ansprechpartnern</li>
+          <li>Abtippen von Belegen, Notizen und Angeboten</li>
+          <li>Nachfragen und Hinterhertelefonieren</li>
+          <li>Doppelte Arbeit und vergessene Abrechnungen</li>
+          <li>Fehler, die erst beim Kunden auffallen</li>
+        </ul>
+      </div>
+      <div class="wohin">
+        <h3>Wohin die Zeit gehen kann</h3>
+        <div class="ziele">
+          <div class="ziel"><b>Kunden</b><p>Mehr Zeit für Beratung, schnellere Antworten, bessere Angebote.</p></div>
+          <div class="ziel"><b>Qualität</b><p>Prüfen und entscheiden statt abtippen – Fehler fallen vorher auf.</p></div>
+          <div class="ziel"><b>Team</b><p>Neue einarbeiten, Wissen weitergeben, weniger Überstunden.</p></div>
+          <div class="ziel"><b>Wachstum</b><p>Mehr Aufträge mit derselben Mannschaft – auch wenn Fachkräfte fehlen.</p></div>
+        </div>
+      </div>
     </div>
-    <p class="annahme">Annahmen zur Häufigkeit je Woche wie im Vortrag gezeigt. Für Deinen Betrieb rechnen wir das gern mit Deinen eigenen Zahlen.</p>
+    <p class="annahme">Wie viel es bei Dir ist und wohin die Zeit am meisten bringt, schauen wir uns gern mit Deinen eigenen Abläufen an.</p>
   </div>
 </section>
 
@@ -359,6 +422,14 @@ a{color:inherit}
       <div class="botschaft"><div class="zahl">04</div><b>KI entscheidet nicht. Sie bereitet vor.</b><p>Freigabe, Zahlung und Verantwortung bleiben beim Menschen – mit allen Informationen auf einen Blick.</p></div>
       <div class="botschaft"><div class="zahl">05</div><b>Deine Daten können im Haus bleiben.</b><p>Firmenwissen fragen läuft auf dem eigenen Server, ohne Cloud.</p></div>
       <div class="botschaft"><div class="zahl">06</div><b>Jeder Nutzen ist in Minuten sichtbar.</b><p>Keine Vision für 2030: Alle sieben Fälle laufen mit heutiger Technik.</p></div>
+    </div>
+    <div class="downloads">
+      <h3>Downloads</h3>
+      <a class="download" href="downloads/BNW-Praesentation-mobilplus-Frank-Winkler-11-2026.pdf" target="_blank" rel="noopener">
+        <span class="dl-art">PDF</span>
+        <span class="dl-text"><b>Präsentation mobilplus · Frank Winkler</b><small>Business Netzwerk Wilsdruff · 25.11.2026 · 10 Folien · 1 MB</small></span>
+        <span class="dl-pfeil">↓</span>
+      </a>
     </div>
   </div>
 </section>
@@ -382,15 +453,18 @@ a{color:inherit}
         <a class="knopf" href="https://os.mobilplus.it/bestellen/seminar-chefsache-ki?code=BNW-2026-11" target="_blank" rel="noopener">Jetzt Platz sichern →</a>
       </div>
       <div class="angebot-karte hell">
-        <div class="klein">Potenzial-Check im eigenen Betrieb</div>
-        <h3>Drei Fälle aus Deinem Alltag – mit Zahl.</h3>
-        <p>90 Minuten bei Dir vor Ort: Wir schauen auf Deine Abläufe, finden die größten Zeitfresser und rechnen aus, was sie Dich im Jahr kosten.</p>
+        <div class="partner"><img src="../logo_mp-systemhaus_1063x237.jpg" alt="mobilplus Systemhaus" style="height:22px"><span>gemeinsam mit</span><img src="../blacksand.png" alt="Blacksand GmbH" style="height:20px"></div>
+        <div class="klein">KI-Potenzialanalyse für Geschäftsführer</div>
+        <h3>Finde heraus, was KI in Deinem Unternehmen bringt.</h3>
+        <p>Frank Winkler (mobilplus) und Bastian Rehbein (Blacksand) schauen mit Dir gemeinsam, wo KI in Deinem Unternehmen Zeit spart und Abläufe verbessert.</p>
         <ul class="liste" style="color:var(--text)">
-          <li>Wo steckt bei Dir Beschäftigung?</li>
-          <li>Welche Daten fehlen oder liegen verstreut?</li>
-          <li>Was bringt der erste Schritt in Euro?</li>
+          <li>Erste Bewertung Deiner wichtigsten Abläufe</li>
+          <li>Konkrete KI-Anwendungsfälle für Deinen Betrieb</li>
+          <li>Empfehlung datenschutzkonformer Werkzeuge</li>
+          <li>Drei konkrete nächste Schritte für den Einstieg</li>
         </ul>
-        <a class="knopf rand" href="https://tally.so/r/obXk7M" target="_blank" rel="noopener">Gespräch vereinbaren →</a>
+        <div class="gesichter"><img src="../Frank.jpg" alt="Frank Winkler"><img src="../Bastian.png" alt="Bastian Rehbein"><span>Kostenfrei für Teilnehmer · online · 30–60 Minuten</span></div>
+        <a class="knopf" href="https://tally.so/r/obXk7M" target="_blank" rel="noopener">Kostenlose Potenzialanalyse sichern →</a>
       </div>
     </div>
   </div>
@@ -422,7 +496,7 @@ a{color:inherit}
           <div class="verweise"><a href="https://www.linkedin.com/in/gustav-bieberstein-568b86207/" target="_blank" rel="noopener">LinkedIn</a></div></div>
       </div>
       <div class="mensch">
-        <img src="../benjamin.png" alt="Benjamin Liebl">
+        <span class="initialen" aria-hidden="true">BL</span>
         <div><b>Benjamin Liebl</b><span>NexxUp · Next Generation Ausbildung</span>
           <div class="verweise"><a href="https://www.nexxup.de/" target="_blank" rel="noopener">nexxup.de</a></div></div>
       </div>
