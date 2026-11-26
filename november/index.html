@@ -103,6 +103,12 @@ a{color:inherit}
 .fall.ausblick .kat,.fall.ausblick p{color:rgba(255,255,255,.72)}
 .fall.ausblick .ergebnis{background:rgba(241,142,53,.18);color:var(--orange)}
 
+.fall .film{width:100%;aspect-ratio:16/9;border-radius:10px;background:#123;display:block;margin:2px 0 4px}
+.fall.ausblick{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:center}
+.ausblick-text{display:flex;flex-direction:column;gap:10px}
+@media(max-width:760px){.fall.ausblick{grid-template-columns:1fr;gap:14px}}
+.film-hinweis{font-size:13px;color:var(--leise);margin-top:14px}
+
 /* Rechnung */
 .rechnung{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:44px;border:1px solid var(--linie);border-radius:18px;overflow:hidden;background:var(--weiss)}
 .schritt{padding:28px 24px;border-right:1px solid var(--linie);position:relative}
@@ -271,49 +277,58 @@ a{color:inherit}
   <div class="innen">
     <div class="ueber">Ein Tag bei der Elbtal Haustechnik GmbH</div>
     <h2>Sieben Fälle, jeder mit einer Zahl</h2>
-    <p class="einleitung">25 Mitarbeiter, Heizung und Sanitär, 3,8 Mio. € Umsatz – erfunden, aber typisch für die Region. Jeder Fall folgte demselben Muster: Problem, Vorführung, Ergebnis, was man dafür braucht.</p>
+    <p class="einleitung">25 Mitarbeiter, Heizung und Sanitär, 3,8 Mio. € Umsatz – erfunden, aber typisch für die Region. Jeder Fall folgte demselben Muster: Problem, Vorführung, Ergebnis, was man dafür braucht. Zu jedem Fall gibt es hier die Aufzeichnung zum Nachsehen, jeweils unter anderthalb Minuten.</p>
     <div class="faelle">
       <article class="fall">
         <div class="kopfzeile"><span class="nr">1</span><span class="kat">Verwaltung &amp; Buchhaltung</span></div>
+        <video class="film" controls preload="none" playsinline poster="videos/fall1-belege.jpg"><source src="videos/fall1-belege.mp4" type="video/mp4">Dein Browser kann das Video nicht abspielen.</video>
         <h3>Rechnungseingang</h3>
         <p>21 Belege am Montag. Die KI liest aus, prüft nach festen Regeln und findet Duplikat, Rechenfehler, eine abweichende E-Rechnung und einen Betrugsversuch mit neuer Bankverbindung. Freigabe und Zahlung bleiben beim Menschen.</p>
         <span class="ergebnis">40 Min → 90 Sek</span>
       </article>
       <article class="fall">
         <div class="kopfzeile"><span class="nr">2</span><span class="kat">Dokumentation &amp; Protokolle</span></div>
+        <video class="film" controls preload="none" playsinline poster="videos/fall2-protokoll.jpg"><source src="videos/fall2-protokoll.mp4" type="video/mp4">Dein Browser kann das Video nicht abspielen.</video>
         <h3>Kundentermin wird Protokoll</h3>
         <p>Gespräch aufnehmen – mit Einwilligung. Umschrift, Protokoll, Aufgaben und Termine entstehen von selbst und gehen direkt an die richtigen Leute.</p>
         <span class="ergebnis">30 Min → 2 Min</span>
       </article>
       <article class="fall">
         <div class="kopfzeile"><span class="nr">3</span><span class="kat">Texte &amp; Kommunikation</span></div>
+        <video class="film" controls preload="none" playsinline poster="videos/fall3-angebot.jpg"><source src="videos/fall3-angebot.mp4" type="video/mp4">Dein Browser kann das Video nicht abspielen.</video>
         <h3>Angebot und Nachfass-Mail</h3>
         <p>Aus dem Protokoll wird ein fertiges Angebot mit den eigenen Preisen und Regeln – unterschrieben am Handy, die Nachfass-Mail gleich mit.</p>
         <span class="ergebnis">45 Min → 8 Min</span>
       </article>
       <article class="fall">
         <div class="kopfzeile"><span class="nr">4</span><span class="kat">Wiederkehrende Prozesse</span></div>
+        <video class="film" controls preload="none" playsinline poster="videos/fall4-abgleich.jpg"><source src="videos/fall4-abgleich.mp4" type="video/mp4">Dein Browser kann das Video nicht abspielen.</video>
         <h3>Geld, das liegen bleibt</h3>
         <p>Wartungsverträge gegen die Abrechnung gelegt: Was wurde geleistet und nie berechnet? Ein Abgleich, den sonst niemand macht.</p>
         <span class="ergebnis">4.300 € im Jahr gefunden</span>
       </article>
       <article class="fall">
         <div class="kopfzeile"><span class="nr">5</span><span class="kat">Recherche &amp; Marktbeobachtung</span></div>
+        <video class="film" controls preload="none" playsinline poster="videos/fall5-markt.jpg"><source src="videos/fall5-markt.mp4" type="video/mp4">Dein Browser kann das Video nicht abspielen.</video>
         <h3>Vom Briefing zur Handlung</h3>
         <p>Eine Marktmeldung allein bringt nichts. Zusammen mit den eigenen Daten wird daraus eine konkrete Handlung für den Betrieb.</p>
         <span class="ergebnis">18 Schritte → 7 Klicks</span>
       </article>
       <article class="fall">
         <div class="kopfzeile"><span class="nr">6</span><span class="kat">Wissen &amp; Einarbeitung</span></div>
+        <video class="film" controls preload="none" playsinline poster="videos/fall6-wissen.jpg"><source src="videos/fall6-wissen.mp4" type="video/mp4">Dein Browser kann das Video nicht abspielen.</video>
         <h3>Firmenwissen fragen</h3>
         <p>Das Betriebshandbuch antwortet statt der Kollegen – mit Fundstelle. Läuft auf dem eigenen Server, die Daten verlassen das Haus nicht. Was nicht drinsteht, erfindet die KI nicht.</p>
         <span class="ergebnis">Antwort in 10 Sek</span>
       </article>
       <article class="fall ausblick">
+        <video class="film" controls preload="none" playsinline poster="videos/fall7-stoerung.jpg"><source src="videos/fall7-stoerung.mp4" type="video/mp4">Dein Browser kann das Video nicht abspielen.</video>
+        <div class="ausblick-text">
         <div class="kopfzeile"><span class="nr">7</span><span class="kat">Ausblick · der Ablauf neu gedacht</span></div>
         <h3>Störung am Samstag</h3>
         <p>Samstag 7:40, Heizung aus. Heute: 3 h 46 min Arbeit, zwei Fahrten, 51 Minuten Beschäftigung. Neu: Die Meldung kommt vollständig, der Einsatz ist fertig vorbereitet, das Teil liegt schon im Auto. Und mit angebundener Anlage findet der Ausfall gar nicht erst statt.</p>
         <span class="ergebnis">Wertschöpfung 47 % → 90 % · Kunde spart 89 €</span>
+              </div>
       </article>
     </div>
   </div>
