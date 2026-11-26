@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Recap November · Business Netzwerk Wilsdruff</title>
+<meta name="description" content="Recap zum BNW-Abend im November 2026: Ein Tag bei der Elbtal Haustechnik GmbH – sieben Fälle, wie KI im Betrieb Beschäftigung in Wertschöpfung verwandelt.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --dunkel:#262626; --dunkel2:#343434; --orange:#F18E35; --orange-tief:#D9741C;
+  --text:#1E1E1E; --leise:#5F6368; --linie:rgba(0,0,0,.09); --flaeche:#F6F5F3; --weiss:#FFFFFF;
+  --gruen:#2E7D4F; --gruen-hell:#E6F3EB;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--weiss);color:var(--text);font-family:'Inter',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.zahl{font-family:'Manrope','Inter',sans-serif}
+a{color:inherit}
+.innen{max-width:1120px;margin:0 auto;padding:0 32px}
+
+/* Kopf */
+.kopf{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--linie)}
+.kopf .innen{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.logos{display:flex;align-items:center;gap:14px}
+.logos img{display:block;width:auto;object-fit:contain}
+.logos .trenner{width:1px;height:26px;background:var(--linie)}
+.knopf{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#fff;text-decoration:none;font-weight:600;font-size:14px;padding:10px 18px;border-radius:10px;transition:background .2s,transform .2s;white-space:nowrap}
+.knopf:hover{background:var(--orange-tief);transform:translateY(-1px)}
+.knopf.hell{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.28)}
+.knopf.hell:hover{background:rgba(255,255,255,.08)}
+.knopf.rand{background:transparent;color:var(--text);border:1.5px solid var(--linie)}
+.knopf.rand:hover{border-color:var(--orange);color:var(--orange-tief)}
+
+/* Bühne */
+/* Veranstalter */
+.veranstalter{background:var(--flaeche);border-bottom:1px solid var(--linie)}
+.veranstalter .innen{display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:center;padding-top:48px;padding-bottom:48px}
+.bnw-karte{background:#fff;border-radius:20px;padding:22px 34px;box-shadow:0 1px 2px rgba(0,0,0,.05),0 8px 24px rgba(0,0,0,.06)}
+.bnw-karte img{display:block;height:120px;width:auto}
+.bnw-text h2{font-size:clamp(28px,3.6vw,44px);line-height:1.08;font-weight:800;letter-spacing:-.015em}
+.bnw-text p{color:var(--leise);font-size:17px;margin-top:10px;max-width:36em}
+.bnw-knoepfe{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+@media(max-width:760px){.veranstalter .innen{grid-template-columns:1fr;gap:24px;justify-items:start}.bnw-karte img{height:84px}}
+
+.buehne{background:var(--dunkel);color:#fff;position:relative;overflow:hidden}
+.buehne::after{content:'';position:absolute;right:-180px;top:-180px;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(241,142,53,.22),rgba(241,142,53,0) 65%);pointer-events:none}
+.buehne .innen{padding-top:84px;padding-bottom:84px;position:relative;z-index:1}
+.pille{display:inline-block;border:1px solid var(--orange);color:var(--orange);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:6px 14px;border-radius:999px;margin-bottom:28px}
+.buehne h1{font-size:clamp(38px,6.2vw,74px);line-height:1.02;font-weight:800;letter-spacing:-.02em;max-width:17ch}
+.buehne h1 span{color:var(--orange);display:block}
+.buehne .unter{font-size:clamp(16px,1.6vw,19px);color:rgba(255,255,255,.72);max-width:44em;margin-top:24px}
+.buehne .aktionen{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.kennzahlen{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:60px}
+.kz{background:var(--dunkel2);border-radius:14px;padding:22px 22px 20px}
+.kz .zahl{font-size:clamp(30px,3.4vw,42px);font-weight:800;color:var(--orange);line-height:1}
+.kz p{font-size:13.5px;color:rgba(255,255,255,.72);margin-top:10px;line-height:1.45}
+
+/* Abschnitte */
+.abschnitt{padding:84px 0}
+.abschnitt.grau{background:var(--flaeche)}
+.ueber{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--orange-tief);margin-bottom:10px}
+.abschnitt h2{font-size:clamp(28px,3.4vw,40px);line-height:1.1;font-weight:800;letter-spacing:-.015em;max-width:22ch}
+.abschnitt .einleitung{color:var(--leise);font-size:17px;max-width:42em;margin-top:14px}
+
+/* Impressionen */
+.impressionen{padding-bottom:84px}
+.bilder{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:12px;margin-top:36px}
+.bilder figure{margin:0;border-radius:14px;overflow:hidden;background:var(--flaeche)}
+.bilder figure.gross{grid-column:span 2;grid-row:span 2}
+.bilder img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.bilder figure:hover img{transform:scale(1.03)}
+@media(max-width:960px){.bilder{grid-template-columns:repeat(2,1fr);grid-auto-rows:170px}}
+@media(max-width:620px){.bilder{grid-template-columns:1fr 1fr;grid-auto-rows:120px}}
+
+/* Kernaussage Beschäftigung/Wertschöpfung */
+.hebel{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-top:44px}
+.def{display:grid;gap:18px}
+.def div{border-left:4px solid var(--gruen);padding:4px 0 4px 18px;font-size:18px}
+.def div.bs{border-color:var(--orange)}
+.def b{font-family:'Manrope',sans-serif}
+.balkenkarte{background:var(--weiss);border:1px solid var(--linie);border-radius:18px;padding:30px}
+.balkenkarte h3{font-size:15px;font-weight:700;margin-bottom:22px}
+.zeile{display:grid;grid-template-columns:60px 1fr;gap:14px;align-items:center;margin-bottom:14px;font-size:13px;font-weight:600;color:var(--leise)}
+.balken{display:flex;height:40px;border-radius:10px;overflow:hidden;gap:3px}
+.balken i{display:flex;align-items:center;padding:0 12px;font-style:normal;font-size:13.5px;font-weight:700;color:#fff;white-space:nowrap}
+.balken .ws{background:var(--gruen)} .balken .bs{background:var(--orange)}
+.balkenkarte .fuss{font-size:13px;color:var(--leise);margin-top:16px}
+
+/* Fälle */
+.faelle{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+.fall{background:var(--weiss);border:1px solid var(--linie);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:10px}
+.fall .kopfzeile{display:flex;align-items:center;gap:12px}
+.fall .nr{width:34px;height:34px;border-radius:50%;background:var(--dunkel);color:#fff;display:grid;place-items:center;font-weight:700;font-size:14px;flex-shrink:0}
+.fall .kat{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--leise)}
+.fall h3{font-size:19px;line-height:1.25;font-weight:800}
+.fall p{font-size:14.5px;color:var(--leise);flex:1}
+.fall .ergebnis{align-self:flex-start;font-size:14px;font-weight:700;color:var(--gruen);background:var(--gruen-hell);padding:6px 12px;border-radius:999px}
+.fall.ausblick{background:var(--dunkel);color:#fff;border-color:var(--dunkel);grid-column:1/-1}
+.fall.ausblick .nr{background:var(--orange)}
+.fall.ausblick .kat,.fall.ausblick p{color:rgba(255,255,255,.72)}
+.fall.ausblick .ergebnis{background:rgba(241,142,53,.18);color:var(--orange)}
+
+/* Rechnung */
+.rechnung{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:44px;border:1px solid var(--linie);border-radius:18px;overflow:hidden;background:var(--weiss)}
+.schritt{padding:28px 24px;border-right:1px solid var(--linie);position:relative}
+.schritt:last-child{border-right:none;background:var(--dunkel);color:#fff}
+.schritt .zahl{font-size:clamp(26px,3vw,36px);font-weight:800;line-height:1.05}
+.schritt:last-child .zahl{color:var(--orange)}
+.schritt p{font-size:13.5px;color:var(--leise);margin-top:8px}
+.schritt:last-child p{color:rgba(255,255,255,.72)}
+.annahme{font-size:13px;color:var(--leise);margin-top:14px}
+
+/* Botschaften */
+.botschaften{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+.botschaft{padding:26px 24px;border-radius:16px;background:var(--weiss);border:1px solid var(--linie)}
+.botschaft .zahl{font-size:15px;font-weight:800;color:var(--orange-tief);margin-bottom:12px}
+.botschaft b{display:block;font-family:'Manrope',sans-serif;font-size:19px;line-height:1.3;margin-bottom:8px}
+.botschaft p{font-size:14.5px;color:var(--leise)}
+
+/* Nächster Schritt */
+.angebot{display:grid;grid-template-columns:1.2fr 1fr;gap:16px;margin-top:44px}
+.angebot-karte{border-radius:20px;padding:36px;display:flex;flex-direction:column;gap:14px}
+.angebot-karte.dunkel{background:var(--dunkel);color:#fff}
+.angebot-karte.hell{background:var(--flaeche);border:1px solid var(--linie)}
+.angebot-karte h3{font-size:clamp(24px,2.6vw,32px);line-height:1.12;font-weight:800}
+.angebot-karte h3 span{color:var(--orange)}
+.angebot-karte .klein{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--orange)}
+.angebot-karte.hell .klein{color:var(--orange-tief)}
+.angebot-karte p{font-size:15px;color:rgba(255,255,255,.72)}
+.angebot-karte.hell p{color:var(--leise)}
+.liste{list-style:none;display:grid;gap:8px;font-size:15px}
+.liste li{display:flex;gap:10px}
+.liste li::before{content:'→';color:var(--orange);font-weight:700}
+.preis{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-top:4px}
+.preis .zahl{font-size:44px;font-weight:800;line-height:1}
+.preis s{color:rgba(255,255,255,.5)}
+.preis small{font-size:13px;color:rgba(255,255,255,.6)}
+.frist{display:inline-block;align-self:flex-start;background:rgba(241,142,53,.16);color:var(--orange);font-weight:700;font-size:13px;padding:6px 12px;border-radius:999px}
+.angebot-karte .knopf{align-self:flex-start;margin-top:6px}
+
+/* Menschen + Links */
+.menschen{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+@media(max-width:960px){.menschen{grid-template-columns:repeat(2,1fr)}}
+.mensch{display:flex;gap:18px;align-items:center;background:var(--weiss);border:1px solid var(--linie);border-radius:16px;padding:22px}
+.mensch img{width:68px;height:68px;border-radius:50%;object-fit:cover;border:2px solid var(--orange);flex-shrink:0}
+.mensch b{display:block;font-size:16px}
+.mensch span{display:block;font-size:13px;color:var(--leise);margin-bottom:8px}
+.verweise{display:flex;gap:8px;flex-wrap:wrap}
+.verweise a{font-size:12px;font-weight:600;text-decoration:none;border:1px solid var(--linie);padding:4px 10px;border-radius:999px;transition:border-color .2s,color .2s}
+.verweise a:hover{border-color:var(--orange);color:var(--orange-tief)}
+
+/* Fuß */
+.fuss{border-top:1px solid var(--linie);padding:30px 0}
+.fuss .innen{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:12.5px;color:var(--leise)}
+.fuss a{color:var(--orange-tief);text-decoration:none}
+
+@media(max-width:960px){
+  .kennzahlen,.rechnung{grid-template-columns:repeat(2,1fr)}
+  .schritt:nth-child(2){border-right:none}
+  .schritt:nth-child(-n+2){border-bottom:1px solid var(--linie)}
+  .hebel,.angebot{grid-template-columns:1fr;gap:28px}
+  .faelle,.botschaften{grid-template-columns:repeat(2,1fr)}
+  .fall.ausblick{grid-column:1/-1}
+}
+@media(max-width:620px){
+  .innen{padding:0 16px}
+  .buehne .innen{padding-top:56px;padding-bottom:56px}
+  .abschnitt{padding:60px 0}
+  .faelle,.botschaften,.menschen,.rechnung,.kennzahlen{grid-template-columns:1fr}
+  .fall.ausblick{grid-column:auto}
+  .schritt{border-right:none;border-bottom:1px solid var(--linie)}
+  .logos .mp,.logos .trenner,.kopf .knopf{display:none}
+  .angebot-karte{padding:26px}
+}
+</style>
+</head>
+<body>
+
+<header class="kopf">
+  <div class="innen">
+    <div class="logos">
+      <img class="bnw" src="../BNW_Logo_1.png" alt="Business Netzwerk Wilsdruff" style="height:52px">
+      <span class="trenner"></span>
+      <img class="mp" src="../logo_mp-systemhaus_1063x237.jpg" alt="mobilplus Systemhaus" style="height:26px">
+    </div>
+    <a class="knopf" href="#naechster-schritt">Platz für Chefsache KI sichern</a>
+  </div>
+</header>
+
+<section class="veranstalter">
+  <div class="innen">
+    <div class="bnw-karte"><img src="../BNW%20Logo.svg" alt="Business Netzwerk Wilsdruff"></div>
+    <div class="bnw-text">
+      <div class="ueber">Veranstalter des Abends</div>
+      <h2>Business Netzwerk Wilsdruff</h2>
+      <p>Gewerbenetzwerk für Kesselsdorf, Wilsdruff und Klipphausen – mitten drin statt nur dabei.</p>
+      <div class="bnw-knoepfe">
+        <a class="knopf" href="https://business-netzwerk-wilsdruff.de/sign-in/" target="_blank" rel="noopener">Noch kein Mitglied? Jetzt anmelden →</a>
+        <a class="knopf rand" href="https://business-netzwerk-wilsdruff.de/" target="_blank" rel="noopener">Website</a>
+        <a class="knopf rand" href="https://www.linkedin.com/in/bn-wilsdruff/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="buehne">
+  <div class="innen">
+    <div class="pille">Recap · Business Netzwerk Wilsdruff · 25. November 2026</div>
+    <h1>Im Oktober das Warum. <span>Heute das Wie.</span></h1>
+    <p class="unter">Ein Tag bei der Elbtal Haustechnik GmbH: sieben Fälle aus dem Alltag eines Handwerksbetriebs, live vorgeführt. Die Firma gibt es nicht, die Probleme schon. Hier findest Du alles zum Nachlesen und Weitermachen.</p>
+    <div class="aktionen">
+      <a class="knopf" href="#faelle">Die sieben Fälle ansehen</a>
+      <a class="knopf hell" href="#naechster-schritt">Dein nächster Schritt</a>
+    </div>
+    <div class="kennzahlen">
+      <div class="kz"><div class="zahl">7</div><p>Fälle, live vorgeführt – in der Reihenfolge eurer Umfrage vom Oktober</p></div>
+      <div class="kz"><div class="zahl">500 h</div><p>Arbeitszeit im Jahr, die eine Firma mit 25 Mitarbeitern zurückgewinnt</p></div>
+      <div class="kz"><div class="zahl">21.800 €</div><p>im Jahr: gesparte Zeit plus Geld, das sonst liegen geblieben wäre</p></div>
+      <div class="kz"><div class="zahl">47 → 90 %</div><p>Anteil Wertschöpfung an unserer Zeit, wenn der Ablauf neu gedacht wird</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="abschnitt impressionen">
+  <div class="innen">
+    <div class="ueber">Impressionen vom Abend</div>
+    <h2>Volles Haus beim zweiten KI&#8209;Abend</h2>
+    <div class="bilder">
+      <figure class="gross"><img src="bilder/abend-01.jpg" alt="Voller Saal beim BNW-Abend am 25. November" loading="lazy"></figure>
+      <figure><img src="bilder/abend-02.jpg" alt="Begrüßung im Business Netzwerk Wilsdruff" loading="lazy"></figure>
+      <figure><img src="bilder/abend-03.jpg" alt="Publikum vor der Folie 23.000 Dollar pro Sekunde" loading="lazy"></figure>
+      <figure><img src="bilder/abend-04.jpg" alt="Vortrag: Sie stellen keinen Ingenieur ein, um Briefmarken zu kleben" loading="lazy"></figure>
+      <figure><img src="bilder/abend-05.jpg" alt="Vortrag: Die neue Kollegin KI" loading="lazy"></figure>
+      <figure><img src="bilder/abend-06.jpg" alt="Vortrag zur Buchhaltung mit DATEV und KI" loading="lazy"></figure>
+      <figure><img src="bilder/abend-07.jpg" alt="Vortrag im Business Netzwerk Wilsdruff" loading="lazy"></figure>
+      <figure><img src="bilder/abend-08.jpg" alt="Vortrag: Was Sie morgen tun können" loading="lazy"></figure>
+      <figure><img src="bilder/abend-09.jpg" alt="Vortrag: Wie sicher ist das?" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="abschnitt grau">
+  <div class="innen">
+    <div class="ueber">Die Kernfrage des Abends</div>
+    <h2>Beschäftigung oder Wertschöpfung?</h2>
+    <p class="einleitung">KI macht nicht einfach alles schneller. Der eigentliche Hebel liegt dort, wo heute gesucht, abgetippt, nachgefragt und telefoniert wird – und wenig von dem passiert, wofür der Kunde bezahlt.</p>
+    <div class="hebel">
+      <div class="def">
+        <div><b>Wertschöpfung</b> ist, wofür der Kunde bezahlt.</div>
+        <div class="bs"><b>Beschäftigung</b> ist, was wir tun, weil Informationen fehlen.</div>
+        <div style="border-color:var(--dunkel)"><b>Erst digital. Dann automatisiert. Dann KI.</b> Wer KI auf analoge Abläufe wirft, verbrennt Geld.</div>
+      </div>
+      <div class="balkenkarte">
+        <h3>Störung am Samstag: Anteil an unserer Arbeitszeit</h3>
+        <div class="zeile">Heute
+          <div class="balken" role="img" aria-label="Heute: 47 Prozent Wertschöpfung, 53 Prozent Beschäftigung"><i class="ws" style="width:47%">47 %</i><i class="bs" style="width:53%">53 % Beschäftigung</i></div>
+        </div>
+        <div class="zeile">Neu
+          <div class="balken" role="img" aria-label="Neu: 90 Prozent Wertschöpfung, 10 Prozent Beschäftigung"><i class="ws" style="width:90%">90 % Wertschöpfung</i><i class="bs" style="width:10%;padding:0"></i></div>
+        </div>
+        <p class="fuss">Der Techniker repariert, statt zu suchen, zu telefonieren und abzutippen. Der Kunde hat anderthalb Stunden früher wieder Wärme – und zahlt 89 € weniger.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="abschnitt" id="faelle">
+  <div class="innen">
+    <div class="ueber">Ein Tag bei der Elbtal Haustechnik GmbH</div>
+    <h2>Sieben Fälle, jeder mit einer Zahl</h2>
+    <p class="einleitung">25 Mitarbeiter, Heizung und Sanitär, 3,8 Mio. € Umsatz – erfunden, aber typisch für die Region. Jeder Fall folgte demselben Muster: Problem, Vorführung, Ergebnis, was man dafür braucht.</p>
+    <div class="faelle">
+      <article class="fall">
+        <div class="kopfzeile"><span class="nr">1</span><span class="kat">Verwaltung &amp; Buchhaltung</span></div>
+        <h3>Rechnungseingang</h3>
+        <p>21 Belege am Montag. Die KI liest aus, prüft nach festen Regeln und findet Duplikat, Rechenfehler, eine abweichende E-Rechnung und einen Betrugsversuch mit neuer Bankverbindung. Freigabe und Zahlung bleiben beim Menschen.</p>
+        <span class="ergebnis">40 Min → 90 Sek</span>
+      </article>
+      <article class="fall">
+        <div class="kopfzeile"><span class="nr">2</span><span class="kat">Dokumentation &amp; Protokolle</span></div>
+        <h3>Kundentermin wird Protokoll</h3>
+        <p>Gespräch aufnehmen – mit Einwilligung. Umschrift, Protokoll, Aufgaben und Termine entstehen von selbst und gehen direkt an die richtigen Leute.</p>
+        <span class="ergebnis">30 Min → 2 Min</span>
+      </article>
+      <article class="fall">
+        <div class="kopfzeile"><span class="nr">3</span><span class="kat">Texte &amp; Kommunikation</span></div>
+        <h3>Angebot und Nachfass-Mail</h3>
+        <p>Aus dem Protokoll wird ein fertiges Angebot mit den eigenen Preisen und Regeln – unterschrieben am Handy, die Nachfass-Mail gleich mit.</p>
+        <span class="ergebnis">45 Min → 8 Min</span>
+      </article>
+      <article class="fall">
+        <div class="kopfzeile"><span class="nr">4</span><span class="kat">Wiederkehrende Prozesse</span></div>
+        <h3>Geld, das liegen bleibt</h3>
+        <p>Wartungsverträge gegen die Abrechnung gelegt: Was wurde geleistet und nie berechnet? Ein Abgleich, den sonst niemand macht.</p>
+        <span class="ergebnis">4.300 € im Jahr gefunden</span>
+      </article>
+      <article class="fall">
+        <div class="kopfzeile"><span class="nr">5</span><span class="kat">Recherche &amp; Marktbeobachtung</span></div>
+        <h3>Vom Briefing zur Handlung</h3>
+        <p>Eine Marktmeldung allein bringt nichts. Zusammen mit den eigenen Daten wird daraus eine konkrete Handlung für den Betrieb.</p>
+        <span class="ergebnis">18 Schritte → 7 Klicks</span>
+      </article>
+      <article class="fall">
+        <div class="kopfzeile"><span class="nr">6</span><span class="kat">Wissen &amp; Einarbeitung</span></div>
+        <h3>Firmenwissen fragen</h3>
+        <p>Das Betriebshandbuch antwortet statt der Kollegen – mit Fundstelle. Läuft auf dem eigenen Server, die Daten verlassen das Haus nicht. Was nicht drinsteht, erfindet die KI nicht.</p>
+        <span class="ergebnis">Antwort in 10 Sek</span>
+      </article>
+      <article class="fall ausblick">
+        <div class="kopfzeile"><span class="nr">7</span><span class="kat">Ausblick · der Ablauf neu gedacht</span></div>
+        <h3>Störung am Samstag</h3>
+        <p>Samstag 7:40, Heizung aus. Heute: 3 h 46 min Arbeit, zwei Fahrten, 51 Minuten Beschäftigung. Neu: Die Meldung kommt vollständig, der Einsatz ist fertig vorbereitet, das Teil liegt schon im Auto. Und mit angebundener Anlage findet der Ausfall gar nicht erst statt.</p>
+        <span class="ergebnis">Wertschöpfung 47 % → 90 % · Kunde spart 89 €</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="abschnitt grau">
+  <div class="innen">
+    <div class="ueber">Was das im Jahr bringt</div>
+    <h2>Zusammengerechnet: 21.800&nbsp;€ für eine Firma mit 25 Mitarbeitern</h2>
+    <div class="rechnung">
+      <div class="schritt"><div class="zahl">652 Min</div><p>gesparte Zeit je Woche aus den Fällen 1 bis 3, 5 und 6</p></div>
+      <div class="schritt"><div class="zahl">≈ 500 h</div><p>im Jahr, bei 46 Arbeitswochen</p></div>
+      <div class="schritt"><div class="zahl">17.500 €</div><p>bei 35 € je Stunde – plus 4.300 € aus Fall 4</p></div>
+      <div class="schritt"><div class="zahl">21.800 €</div><p>im Jahr. Fall 7 ist noch nicht eingerechnet.</p></div>
+    </div>
+    <p class="annahme">Annahmen zur Häufigkeit je Woche wie im Vortrag gezeigt. Für Deinen Betrieb rechnen wir das gern mit Deinen eigenen Zahlen.</p>
+  </div>
+</section>
+
+<section class="abschnitt">
+  <div class="innen">
+    <div class="ueber">Die wichtigsten Botschaften</div>
+    <h2>Was Du am 25. November mitgenommen hast</h2>
+    <div class="botschaften">
+      <div class="botschaft"><div class="zahl">01</div><b>Wo Beschäftigung steckt, liegt der Hebel.</b><p>Nicht schneller arbeiten, sondern weniger suchen, abtippen und nachfragen.</p></div>
+      <div class="botschaft"><div class="zahl">02</div><b>Daten verbinden ist das Fundament.</b><p>Solange Kunde, Anlage und Auftrag in zig Systemen liegen, sucht der Mensch. Finden sie zueinander, arbeitet das System.</p></div>
+      <div class="botschaft"><div class="zahl">03</div><b>Erst digital. Dann automatisiert. Dann KI.</b><p>Vieles bringt schon die Automatisierung – ganz ohne KI, mit Nutzen in Wochen.</p></div>
+      <div class="botschaft"><div class="zahl">04</div><b>KI entscheidet nicht. Sie bereitet vor.</b><p>Freigabe, Zahlung und Verantwortung bleiben beim Menschen – mit allen Informationen auf einen Blick.</p></div>
+      <div class="botschaft"><div class="zahl">05</div><b>Deine Daten können im Haus bleiben.</b><p>Firmenwissen fragen läuft auf dem eigenen Server, ohne Cloud.</p></div>
+      <div class="botschaft"><div class="zahl">06</div><b>Jeder Nutzen ist in Minuten sichtbar.</b><p>Keine Vision für 2030: Alle sieben Fälle laufen mit heutiger Technik.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="abschnitt grau" id="naechster-schritt">
+  <div class="innen">
+    <div class="ueber">Dein nächster Schritt</div>
+    <h2>Vom Zuschauen ins Machen</h2>
+    <div class="angebot">
+      <div class="angebot-karte dunkel">
+        <div class="klein">Chefsache KI · Do, 21.01.2027 · Start 9:00 Uhr</div>
+        <h3>Ein Tag. <span>Dein KI-Startplan.</span></h3>
+        <p>Keine Folienschlacht, keine Ideenliste. Du arbeitest unter anderem an Deinen Themen und gehst mit dem ersten konkreten Schritt zurück ins Unternehmen.</p>
+        <ul class="liste">
+          <li>Höchstens 12 Geschäftsführer aus verschiedenen Branchen</li>
+          <li>Vorab-Check zu Deiner Branche, Startplan auf einer Seite</li>
+          <li>30-Tage-Check: eine Stunde online nach dem Start</li>
+        </ul>
+        <div class="preis"><span class="zahl">799 €</span><s>949 €</s><small>netto je Teilnehmer, mit Mittagsimbiss</small></div>
+        <span class="frist">BNW-Vorteilspreis gilt bis 10.12.2026</span>
+        <a class="knopf" href="https://os.mobilplus.it/bestellen/seminar-chefsache-ki?code=BNW-2026-11" target="_blank" rel="noopener">Jetzt Platz sichern →</a>
+      </div>
+      <div class="angebot-karte hell">
+        <div class="klein">Potenzial-Check im eigenen Betrieb</div>
+        <h3>Drei Fälle aus Deinem Alltag – mit Zahl.</h3>
+        <p>90 Minuten bei Dir vor Ort: Wir schauen auf Deine Abläufe, finden die größten Zeitfresser und rechnen aus, was sie Dich im Jahr kosten.</p>
+        <ul class="liste" style="color:var(--text)">
+          <li>Wo steckt bei Dir Beschäftigung?</li>
+          <li>Welche Daten fehlen oder liegen verstreut?</li>
+          <li>Was bringt der erste Schritt in Euro?</li>
+        </ul>
+        <a class="knopf rand" href="https://tally.so/r/obXk7M" target="_blank" rel="noopener">Gespräch vereinbaren →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="abschnitt">
+  <div class="innen">
+    <div class="ueber">Im Gespräch bleiben</div>
+    <h2>Die Gesichter des Abends</h2>
+    <div class="menschen">
+      <div class="mensch">
+        <img src="../Frank.jpg" alt="Frank Winkler">
+        <div><b>Frank Winkler</b><span>Geschäftsführer · mobilplus Systemhaus GmbH</span>
+          <div class="verweise"><a href="https://www.linkedin.com/in/frank-km-winkler" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:frank@mobilplus.it">E-Mail</a><a href="https://mobilplus.it" target="_blank" rel="noopener">mobilplus.it</a></div></div>
+      </div>
+      <div class="mensch">
+        <img src="../Thomas.png" alt="Thomas Gräbner">
+        <div><b>Thomas Gräbner</b><span>Business Netzwerk Wilsdruff</span>
+          <div class="verweise"><a href="https://www.linkedin.com/in/thomas-gr%C3%A4bner-695806214/" target="_blank" rel="noopener">LinkedIn</a><a href="https://business-netzwerk-wilsdruff.de/" target="_blank" rel="noopener">Website</a><a href="https://business-netzwerk-wilsdruff.de/sign-in/" target="_blank" rel="noopener">Mitglied werden</a></div></div>
+      </div>
+      <div class="mensch">
+        <img src="../Bastian.png" alt="Bastian Rehbein">
+        <div><b>Bastian Rehbein</b><span>Geschäftsführer · Blacksand GmbH</span>
+          <div class="verweise"><a href="https://www.linkedin.com/in/bastianrehbein/" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:rehbein@blacksand.de">E-Mail</a><a href="https://blacksand.de" target="_blank" rel="noopener">blacksand.de</a></div></div>
+      </div>
+      <div class="mensch">
+        <img src="../biberstein.png" alt="Gustav Bieberstein">
+        <div><b>Gustav Bieberstein</b><span>Digital Manufacturing Consultant · SAP</span>
+          <div class="verweise"><a href="https://www.linkedin.com/in/gustav-bieberstein-568b86207/" target="_blank" rel="noopener">LinkedIn</a></div></div>
+      </div>
+      <div class="mensch">
+        <img src="../benjamin.png" alt="Benjamin Liebl">
+        <div><b>Benjamin Liebl</b><span>NexxUp · Next Generation Ausbildung</span>
+          <div class="verweise"><a href="https://www.nexxup.de/" target="_blank" rel="noopener">nexxup.de</a></div></div>
+      </div>
+    </div>
+    <p class="annahme" style="margin-top:28px">Zum Nachlesen: der <a href="../" style="color:var(--orange-tief)">Recap vom KI-Impuls im Oktober</a>.</p>
+  </div>
+</section>
+
+<footer class="fuss">
+  <div class="innen">
+    <span><strong>Frank Winkler</strong> · mobilplus Systemhaus GmbH · <a href="mailto:frank@mobilplus.it">frank@mobilplus.it</a></span>
+    <span>Business Netzwerk Wilsdruff · 25.11.2026 · Alle Daten der Musterfirma sind erfunden.</span>
+  </div>
+</footer>
+
+</body>
+</html>
