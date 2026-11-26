@@ -182,6 +182,25 @@ a{color:inherit}
 @media(max-width:860px){.nutzen{grid-template-columns:1fr}}
 @media(max-width:520px){.ziele{grid-template-columns:1fr}}
 
+.nexxup{background:var(--dunkel);color:#fff;padding:84px 0}
+.nexxup .ueber{color:var(--orange)}
+.nexxup h2{font-size:clamp(26px,3.2vw,38px);line-height:1.12;font-weight:800;letter-spacing:-.015em;max-width:24ch}
+.nexxup .einleitung{color:rgba(255,255,255,.75);font-size:17px;max-width:44em;margin-top:18px}
+.nx-kopf{display:flex;gap:20px;align-items:center}
+.nexxup .initialen{background:var(--dunkel2)}
+.nx-schritte{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:36px}
+.nx-schritte>div{background:var(--dunkel2);border-radius:14px;padding:22px}
+.nx-schritte span{font-family:"Manrope",sans-serif;font-weight:800;color:var(--orange);font-size:14px}
+.nx-schritte b{display:block;font-family:"Manrope",sans-serif;font-size:17px;margin:8px 0 6px}
+.nx-schritte p{font-size:14px;color:rgba(255,255,255,.72)}
+.nx-betrieb{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:end;margin-top:28px;border-top:1px solid rgba(255,255,255,.12);padding-top:28px}
+.nx-betrieb h3{font-family:"Manrope",sans-serif;font-size:18px;font-weight:800;margin-bottom:12px}
+.nx-betrieb .liste{color:rgba(255,255,255,.85)}
+.nx-bezug{font-size:14px;color:rgba(255,255,255,.6);margin-top:14px}
+.nx-knoepfe{display:flex;gap:10px;flex-wrap:wrap}
+@media(max-width:860px){.nx-schritte{grid-template-columns:1fr}.nx-betrieb{grid-template-columns:1fr;gap:20px}}
+@media(max-width:620px){.nexxup{padding:60px 0}.nx-kopf{align-items:flex-start}.nexxup .initialen{width:52px;height:52px;font-size:17px}}
+
 /* Menschen + Links */
 .menschen{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
 @media(max-width:960px){.menschen{grid-template-columns:repeat(2,1fr)}}
@@ -408,6 +427,37 @@ a{color:inherit}
       </div>
     </div>
     <p class="annahme">Wie viel es bei Dir ist und wohin die Zeit am meisten bringt, schauen wir uns gern mit Deinen eigenen Abläufen an.</p>
+  </div>
+</section>
+
+<section class="nexxup">
+  <div class="innen">
+    <div class="nx-kopf">
+      <span class="initialen">BL</span>
+      <div><div class="ueber">Impuls des Abends · Benjamin Liebl</div>
+      <h2>NexxUp: Nachwuchs gewinnen, bevor die erste Bewerbung entsteht</h2></div>
+    </div>
+    <p class="einleitung">Hier noch einmal in Ruhe zum Nachlesen: NexxUp verbindet Berufsorientierung mit regionaler Nachwuchsgewinnung: Schüler entdecken ihre Stärken und passende Berufe, und Betriebe aus der Region werden dabei früh sichtbar.</p>
+    <div class="nx-schritte">
+      <div><span>01</span><b>Interessen entdecken</b><p>Junge Menschen finden heraus, was sie können und was zu ihnen passt.</p></div>
+      <div><span>02</span><b>Betriebe in der Region kennenlernen</b><p>Passende Berufsfelder und Ausbildungsbetriebe in der Umgebung werden sichtbar.</p></div>
+      <div><span>03</span><b>Kontakt aufbauen</b><p>Aus Interesse werden Gespräche, Praktika und später Ausbildungsplätze.</p></div>
+    </div>
+    <div class="nx-betrieb">
+      <div>
+        <h3>Was Dein Betrieb davon hat</h3>
+        <ul class="liste">
+          <li>Früher präsent sein – während Schüler sich orientieren, nicht erst bei der Stellenanzeige</li>
+          <li>Zeigen, wie Arbeiten bei Euch aussieht: Profil, Beiträge, Ausbildungsangebote</li>
+          <li>Mit Interessierten in Kontakt bleiben, vom ersten Gespräch bis zur Bewerbung</li>
+        </ul>
+        <p class="nx-bezug">Passt zum Abend: Wer Zeit von Beschäftigung zu Wertschöpfung verlagert, hat auch wieder Zeit für Ausbildung und Nachwuchs.</p>
+      </div>
+      <div class="nx-knoepfe">
+        <a class="knopf" href="https://www.nexxup.de/unternehmen/" target="_blank" rel="noopener">NexxUp für Betriebe →</a>
+        <a class="knopf hell" href="https://www.nexxup.de/" target="_blank" rel="noopener">nexxup.de</a>
+      </div>
+    </div>
   </div>
 </section>
 
