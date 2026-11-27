@@ -232,6 +232,29 @@ a{color:inherit}
 @media(max-width:960px){.gb-stufen{grid-template-columns:repeat(2,1fr)}.gb-unten{grid-template-columns:1fr}}
 @media(max-width:620px){.gb-stufen{grid-template-columns:1fr}.gb-kopf{align-items:flex-start}.gb-kopf img{width:52px;height:52px}.gb-fuss .knopf{white-space:normal}}
 
+/* Impuls Bastian: KI weit außerhalb des Chats */
+.br-zitat{margin-top:28px;font-family:"Manrope",sans-serif;font-weight:800;font-size:clamp(22px,2.6vw,30px);line-height:1.25;max-width:30ch;border-left:4px solid var(--orange);padding-left:20px}
+.br-zitat small{display:block;font-family:inherit;font-weight:600;font-size:14px;color:var(--leise);margin-top:8px;line-height:1.5}
+.br-faelle{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px}
+.br-fall{background:var(--weiss);border:1px solid var(--linie);border-radius:16px;padding:24px 22px;display:flex;flex-direction:column}
+.br-fall span{font-family:"Manrope",sans-serif;font-weight:800;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange-tief)}
+.br-fall b{display:block;font-family:"Manrope",sans-serif;font-size:18px;line-height:1.25;margin:10px 0 8px}
+.br-fall p{font-size:14.5px;color:var(--leise)}
+.br-fall .ergebnis{margin-top:auto;padding-top:14px;font-weight:700;font-size:13.5px;color:var(--text);letter-spacing:0;text-transform:none;font-family:inherit}
+.br-fall.gross{grid-column:span 2;background:var(--dunkel);border-color:var(--dunkel);color:#fff}
+.br-fall.gross span{color:var(--orange)}
+.br-fall.gross p{color:rgba(255,255,255,.78)}
+.br-fall.gross .ergebnis{color:#fff}
+.br-zahlen{display:flex;gap:28px;flex-wrap:wrap;margin-top:18px}
+.br-zahlen div{font-size:13.5px;color:rgba(255,255,255,.7);max-width:15em}
+.br-zahlen strong{display:block;font-family:"Manrope",sans-serif;font-size:26px;color:var(--orange);line-height:1.1;margin-bottom:4px}
+.br-unten{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+.br-box{background:var(--weiss);border:1px solid var(--linie);border-radius:16px;padding:28px}
+.br-box h3{font-family:"Manrope",sans-serif;font-size:18px;font-weight:800;margin-bottom:16px}
+@media(min-width:961px){.br-fall.breit{grid-column:span 2}}
+@media(max-width:960px){.br-faelle{grid-template-columns:repeat(2,1fr)}.br-unten{grid-template-columns:1fr}}
+@media(max-width:620px){.br-faelle{grid-template-columns:1fr}.br-fall.gross{grid-column:auto}}
+
 /* Menschen + Links */
 .menschen{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
 @media(max-width:960px){.menschen{grid-template-columns:repeat(2,1fr)}}
@@ -304,9 +327,10 @@ a{color:inherit}
   <div class="innen">
     <div class="pille">Recap · Business Netzwerk Wilsdruff · 25. November 2026</div>
     <h1>Im Oktober das Warum. <span>Heute das Wie.</span></h1>
-    <p class="unter">Ein Tag bei der Elbtal Haustechnik GmbH: sieben Fälle aus dem Alltag eines Handwerksbetriebs, live vorgeführt. Die Firma gibt es nicht, die Probleme schon. Dazu Gustav Bieberstein mit der „neuen Kollegin KI“: wie Du KI einarbeitest – erst digitalisieren, dann automatisieren, dann gezielt KI, sauber abgesichert. Hier findest Du alles zum Nachlesen und Weitermachen.</p>
+    <p class="unter">Ein Tag bei der Elbtal Haustechnik GmbH: sieben Fälle aus dem Alltag eines Handwerksbetriebs, live vorgeführt. Die Firma gibt es nicht, die Probleme schon. Dazu Bastian Rehbein mit „KI im Einsatz“: was echte Betriebe heute schon automatisieren, von der Buchhaltung bis zur Konstruktion. Und Gustav Bieberstein mit der „neuen Kollegin KI“: wie Du KI einarbeitest – erst digitalisieren, dann automatisieren, dann gezielt KI, sauber abgesichert. Hier findest Du alles zum Nachlesen und Weitermachen.</p>
     <div class="aktionen">
       <a class="knopf" href="#faelle">Die sieben Fälle ansehen</a>
+      <a class="knopf hell" href="#ki-im-einsatz">KI im Einsatz</a>
       <a class="knopf hell" href="#kollegin-ki">Die neue Kollegin KI</a>
       <a class="knopf hell" href="#naechster-schritt">Dein nächster Schritt</a>
     </div>
@@ -503,6 +527,90 @@ a{color:inherit}
   </div>
 </section>
 
+<section class="abschnitt grau" id="ki-im-einsatz">
+  <div class="innen">
+    <div class="gb-kopf">
+      <img src="../Bastian.png" alt="Bastian Rehbein">
+      <div><div class="ueber">Impuls des Abends · Bastian Rehbein, Blacksand GmbH</div>
+      <h2>KI im Einsatz: weit außerhalb des Chats</h2></div>
+    </div>
+    <p class="einleitung">Eine E-Mail an Herrn Müller schreiben kann jeder Chat. Bastian hat gezeigt, wie Betriebe KI heute schon in ihre Abläufe einbauen: Die KI hört zu, liest, prüft und baut, und am Ende gibt ein Mensch frei.</p>
+    <p class="br-zitat">Niemand steckt 790 Milliarden in KI, damit sie am Ende eine E-Mail schreibt.<small>Allein die sechs größten Technologiekonzerne investieren 2026 so viel in KI – mehr als Marshallplan, Apollo-Programm und ISS zusammen.</small></p>
+    <div class="br-faelle">
+      <div class="br-fall gross">
+        <span>Kundenprojekt · Spedition</span>
+        <b>Belegfluss: Belege buchen sich selbst</b>
+        <p>Ein paar hundert Eingangsrechnungen im Monat, früher tagelang von Hand abgetippt. Heute liest die KI jeden Beleg ohne Vorlage je Lieferant aus. Jeder Wert muss wörtlich auf dem Beleg stehen, die Rechenprobe muss stimmen, Dubletten fallen auf. Dann wird sortiert, abgelegt und in DATEV gebucht.</p>
+        <div class="br-zahlen">
+          <div><strong>300</strong>Mitarbeiter, rund – alle täglichen Belege laufen durch</div>
+          <div><strong>98–99 %</strong>der Belege werden automatisch einsortiert und gebucht</div>
+          <div><strong>1</strong>eigene DATEV-Schnittstelle, gerade bei DATEV im Audit</div>
+        </div>
+      </div>
+      <div class="br-fall">
+        <span>Buchhaltung</span>
+        <b>Die Buchhaltung einfach fragen</b>
+        <p>„Warum ist die Marge im dritten Quartal gesunken?“ Ein Agent holt die Antwort live aus DATEV, als Tabelle oder Diagramm. Die BWA kommt jeden Monat per Mail, Fristen werden rechtzeitig gemeldet.</p>
+        <span class="ergebnis">Über 200 Werkzeuge aus 18 DATEV-Bereichen</span>
+      </div>
+      <div class="br-fall">
+        <span>Kundengespräche</span>
+        <b>Drei Minuten später steht die Mail</b>
+        <p>Das Gespräch wird aufgenommen und ausgewertet: Bedarf, Budget, Einwände, nächster Schritt. Die passende Nachfass-Mail geht erst nach Freigabe raus, CRM und Teams sind schon aktualisiert.</p>
+        <span class="ergebnis">Jedes Gespräch im Dashboard, nach Abschlusschance sortiert</span>
+      </div>
+      <div class="br-fall">
+        <span>Angebote</span>
+        <b>Broschüre im Design des Kunden</b>
+        <p>Aus Website und Logo eines Interessenten entsteht eine zehnseitige PDF mit vier passenden KI-Anwendungsfällen – jeweils einfach, KI-gestützt und als Agent.</p>
+        <span class="ergebnis">Fertig in 2 bis 5 Minuten</span>
+      </div>
+      <div class="br-fall">
+        <span>Kundenzufriedenheit</span>
+        <b>Bewertungen, die man nicht vergisst</b>
+        <p>Nach jedem Auftrag bekommt der Kunde eine SMS mit Bewertungslink. Bei ein bis drei Sternen kommt sofort eine Meldung, Rückruf-Aufgabe und Antwortentwurf liegen schon bereit.</p>
+        <span class="ergebnis">Rückruf noch am selben Tag</span>
+      </div>
+      <div class="br-fall">
+        <span>Betrieb &amp; Wissen</span>
+        <b>Digitaler Betriebsleiter</b>
+        <p>Eine App zeigt, wie weit der Tag ist, die Quote der Woche und knappe Bestände. Fragen zum Maschinenpark beantwortet sie per Text oder Sprache aus den eigenen Betriebsanleitungen, mit Quelle.</p>
+        <span class="ergebnis">Antwort mit Fundstelle</span>
+      </div>
+      <div class="br-fall breit">
+        <span>Konstruktion</span>
+        <b>Bauteile per Sprache konstruieren</b>
+        <p>„Eine Versteifungsrippe in der Mitte“: Die KI setzt das direkt im 3D-Programm um, prüft jedes Maß gegen die Vorgabe und gibt das Bauteil erst dann an den 3D-Drucker – mit technischer Zeichnung.</p>
+        <span class="ergebnis">Erst Maßprüfung, dann Druck</span>
+      </div>
+    </div>
+    <div class="br-unten">
+      <div class="gb-weg">
+        <h3>Hier entscheidet ein Mensch</h3>
+        <ol>
+          <li><span><b>Neuer Lieferant?</b> Das System fragt vorher nach.</span></li>
+          <li><span><b>Betrag über der Freigabegrenze?</b> Landet auf der Prüfliste.</span></li>
+          <li><span><b>Geänderte Bankverbindung?</b> Wird nie still übernommen.</span></li>
+        </ol>
+      </div>
+      <div class="br-box">
+        <h3>Wie sicher ist das?</h3>
+        <ul class="liste">
+          <li>Anmeldung über den DATEV-Login – keine Passwörter in der KI</li>
+          <li>Erst lesen, schreiben nur nach Freigabe durch einen Menschen</li>
+          <li>Die KI sieht nur, was der Nutzer sehen darf</li>
+          <li>Hosting in der EU mit AVV, kein Training mit Deinen Daten</li>
+          <li>Protokoll: wer hat wann was abgefragt</li>
+        </ul>
+      </div>
+    </div>
+    <div class="gb-fuss">
+      <p>Alle Beispiele mit Ablauf, Bildschirmfotos und Werkzeugen stehen in Bastians Präsentation zum Nachlesen.</p>
+      <a class="knopf" href="downloads/BNW-Praesentation-Blacksand-Bastian-Rehbein-11-2026.pdf" target="_blank" rel="noopener">Bastians Präsentation (PDF) →</a>
+    </div>
+  </div>
+</section>
+
 <section class="nexxup">
   <div class="innen">
     <div class="nx-kopf">
@@ -557,6 +665,11 @@ a{color:inherit}
         <span class="dl-art">WEB</span>
         <span class="dl-text"><b>Präsentation Gustav Bieberstein · Die neue Kollegin KI</b><small>Mit Zeitfresser-Liste und Kostenrechner · online</small></span>
         <span class="dl-pfeil">↗</span>
+      </a>
+      <a class="download" href="downloads/BNW-Praesentation-Blacksand-Bastian-Rehbein-11-2026.pdf" target="_blank" rel="noopener" style="margin-top:10px">
+        <span class="dl-art">PDF</span>
+        <span class="dl-text"><b>Präsentation Blacksand · Bastian Rehbein · KI im Einsatz</b><small>Praxiseinblick · 35 Folien · 3,4 MB</small></span>
+        <span class="dl-pfeil">↓</span>
       </a>
     </div>
   </div>
