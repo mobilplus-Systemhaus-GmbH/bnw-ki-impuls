@@ -206,6 +206,32 @@ a{color:inherit}
 @media(max-width:860px){.nx-schritte{grid-template-columns:1fr}.nx-betrieb{grid-template-columns:1fr;gap:20px}}
 @media(max-width:620px){.nexxup{padding:60px 0}.nx-kopf{align-items:flex-start}.nexxup .initialen{width:52px;height:52px;font-size:17px}}
 
+/* Impuls Gustav: Die neue Kollegin KI */
+.gb-kopf{display:flex;gap:20px;align-items:center}
+.gb-kopf img{width:68px;height:68px;border-radius:50%;object-fit:cover;border:2px solid var(--orange);flex-shrink:0}
+.gb-kopf h2{max-width:26ch}
+.gb-stufen{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px}
+.gb-stufe{background:var(--flaeche);border:1px solid var(--linie);border-radius:16px;padding:24px 22px}
+.gb-stufe span{font-family:"Manrope",sans-serif;font-weight:800;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange-tief)}
+.gb-stufe b{display:block;font-family:"Manrope",sans-serif;font-size:18px;line-height:1.25;margin:10px 0 8px}
+.gb-stufe p{font-size:14.5px;color:var(--leise)}
+.gb-unten{display:grid;grid-template-columns:1.25fr 1fr;gap:16px;margin-top:16px}
+.gb-weg{background:var(--dunkel);color:#fff;border-radius:16px;padding:28px}
+.gb-weg h3,.gb-team h3{font-family:"Manrope",sans-serif;font-size:18px;font-weight:800;margin-bottom:16px}
+.gb-weg ol{list-style:none;display:grid;gap:12px;counter-reset:f}
+.gb-weg li{display:grid;grid-template-columns:28px 1fr;gap:10px;font-size:15px;color:rgba(255,255,255,.8);counter-increment:f}
+.gb-weg li::before{content:counter(f);width:24px;height:24px;border-radius:50%;background:rgba(241,142,53,.18);color:var(--orange);font-weight:800;font-size:12.5px;display:grid;place-items:center}
+.gb-weg li b{color:#fff;font-weight:700}
+.gb-team{background:var(--weiss);border:1px solid var(--linie);border-radius:16px;padding:28px}
+.gb-team dl{display:grid;gap:14px}
+.gb-team dt{font-weight:700;font-size:15px}
+.gb-team dt small{font-weight:600;color:var(--orange-tief);margin-left:6px}
+.gb-team dd{font-size:14px;color:var(--leise)}
+.gb-fuss{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:28px}
+.gb-fuss p{font-size:14.5px;color:var(--leise);max-width:40em}
+@media(max-width:960px){.gb-stufen{grid-template-columns:repeat(2,1fr)}.gb-unten{grid-template-columns:1fr}}
+@media(max-width:620px){.gb-stufen{grid-template-columns:1fr}.gb-kopf{align-items:flex-start}.gb-kopf img{width:52px;height:52px}.gb-fuss .knopf{white-space:normal}}
+
 /* Menschen + Links */
 .menschen{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
 @media(max-width:960px){.menschen{grid-template-columns:repeat(2,1fr)}}
@@ -436,6 +462,46 @@ a{color:inherit}
   </div>
 </section>
 
+<section class="abschnitt" id="kollegin-ki">
+  <div class="innen">
+    <div class="gb-kopf">
+      <img src="../biberstein.png" alt="Gustav Bieberstein">
+      <div><div class="ueber">Impuls des Abends · Gustav Bieberstein</div>
+      <h2>Die neue Kollegin KI: erst einarbeiten, dann arbeiten lassen</h2></div>
+    </div>
+    <p class="einleitung">KI ist wie eine neue Mitarbeiterin. Sie braucht einen Schreibtisch, eine passende Aufgabe, den richtigen Platz im Team und klare Spielregeln. Gustav hat das in vier Stufen gezeigt.</p>
+    <div class="gb-stufen">
+      <div class="gb-stufe"><span>1 · Digitalisieren</span><b>Ein Schreibtisch</b><p>KI arbeitet nur mit dem, was digital und auffindbar vorliegt – eine gültige Preisliste statt fünf.</p></div>
+      <div class="gb-stufe"><span>2 · Automatisieren</span><b>Eine Frankiermaschine</b><p>Feste Regeln laufen ohne KI: einmal bauen, danach fast kostenlos. Rechnen macht Code, nicht das Sprachmodell.</p></div>
+      <div class="gb-stufe"><span>3 · Gezielt KI</span><b>Der passende Platz im Team</b><p>Nicht jede Aufgabe braucht den Experten. Das richtige Modell zum richtigen Preis.</p></div>
+      <div class="gb-stufe"><span>4 · Absichern</span><b>Vertrag und Schlüssel</b><p>Business-Konto mit Vertrag, Daten-Ampel, kurze Schulung für alle – wie bei jedem neuen Mitarbeiter.</p></div>
+    </div>
+    <div class="gb-unten">
+      <div class="gb-weg">
+        <h3>Der Weg jeder Aufgabe</h3>
+        <ol>
+          <li><span><b>Liegt es digital vor?</b> Wenn nein: erst digitalisieren.</span></li>
+          <li><span><b>Läuft es nach fester Regel?</b> Wenn ja: automatisieren, keine KI.</span></li>
+          <li><span><b>Dürfen die Daten in die Cloud?</b> Wenn nein: lokal im Haus oder EU-Hosting.</span></li>
+          <li><span><b>Routine in großer Menge?</b> Wenn ja: einfaches Modell. Sonst mittleres, schwierige Fälle zum Experten.</span></li>
+        </ol>
+      </div>
+      <div class="gb-team">
+        <h3>Das richtige Team</h3>
+        <dl>
+          <div><dt>Der Azubi <small>einfaches Modell</small></dt><dd>Routine in Menge: Mails sortieren, Formulare auslesen. Cent-Beträge im Monat.</dd></div>
+          <div><dt>Der Sachbearbeiter <small>mittleres Modell</small></dt><dd>Entwürfe, Zusammenfassungen, Analysen. Wenige Euro im Monat.</dd></div>
+          <div><dt>Der Senior-Experte <small>High-End-Modell</small></dt><dd>Seltene, knifflige Fälle – immer mit Gegenlesen.</dd></div>
+        </dl>
+      </div>
+    </div>
+    <div class="gb-fuss">
+      <p>Zum Mitnehmen: Zeitfresser eine Woche lang notieren, jede Aufgabe durch die vier Fragen schicken und abschätzen, was KI dafür im Monat kostet – mit Gustavs Werkzeugen direkt im Browser.</p>
+      <a class="knopf" href="https://gstvbstn.github.io/Karla-Intelli/" target="_blank" rel="noopener">Gustavs Präsentation und Werkzeuge →</a>
+    </div>
+  </div>
+</section>
+
 <section class="nexxup">
   <div class="innen">
     <div class="nx-kopf">
@@ -485,6 +551,11 @@ a{color:inherit}
         <span class="dl-art">PDF</span>
         <span class="dl-text"><b>Präsentation mobilplus · Frank Winkler</b><small>Business Netzwerk Wilsdruff · 25.11.2026 · 10 Folien · 1 MB</small></span>
         <span class="dl-pfeil">↓</span>
+      </a>
+      <a class="download" href="https://gstvbstn.github.io/Karla-Intelli/" target="_blank" rel="noopener" style="margin-top:10px">
+        <span class="dl-art">WEB</span>
+        <span class="dl-text"><b>Präsentation Gustav Bieberstein · Die neue Kollegin KI</b><small>Mit Zeitfresser-Liste und Kostenrechner · online</small></span>
+        <span class="dl-pfeil">↗</span>
       </a>
     </div>
   </div>
